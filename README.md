@@ -1,37 +1,37 @@
-# Hacknet For CMD (C++)
-"Hacknet for CMD" originally by AhQiang and uses Batch for code, but changed to C++ by Skiawm91 for code now.
+# Hacknet4CMD: C++ Edition
+Hacknet4CMD is a legacy project, last updated about 1 year ago yet.
 <br/>
-## Some parts are different from AhQiang's "Hacknet For CMD"
-All text to English.
-### 1. Boot
-I deleted all codes about wmic, because I didn't know how to convert to C++. 
 <br/>
-Then, wmic deleted in Windows 11 24H2.
+Before make C++ ver, I just joined "Hacknet For CMD | Official Server" from Discord.
 <br/>
-I also hid systeminfo output.
-### 2. Login UI
-If password invalid will uses MessageBox.
+<br>
+Then, a person "65536Java (NULL)" joined and sent a program about Hacknet4CMD.
+<br/>
+And, this program remade Hacknet4CMD with Java.
+<br/>
+<br>
+So, I made a program remade Hacknet4CMD in a day.
+<br/>
+With C++, just like "Minecraft: Bedrock Edition" lol.
 ## How to use?
 1. Download from [Releases](https://github.com/Skiawm91/Hacknet-For-CMD-Cpp/releases)
 2. Extract file.
-3. Open "Hacknet.exe"
+3. Open "Hacknet"
 4. Enjoy!
 ## I don't want to use release, but how to build?
 ### Requirements
-1. [Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) with "Desktop development with C++"
+1. (Windows) [Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) with "Desktop development with C++"
+   (macOS) "Clang++" - just run `clang++` in terminal.
 ### Step
-1. Open "Developer Command Prompt for VS 20xx"
-2. Clone repository
+1. Clone repository
 ```
 git clone https://github.com/Skiawm91/Hacknet-For-CMD-Cpp.git
 cd Hacknet-For-CMD-Cpp
 ```
-3. Run `build.bat` and wait
-4. If Done, Press any keys
-5. If has no any errors, should it run
-<br/>
-Built File save in "Build" directory!
-<br/>
+2. Run `build_win.bat` for Windows
+   (`build_mac.command` for macOS)
+3. If Done, Press Enter key
+4. If has no any errors, should it run
 ## Thanks
 * [Skiawm91](https://github.com/Skiawm91)
 * [AhQiang](https://github.com/Hoyiqiang)
