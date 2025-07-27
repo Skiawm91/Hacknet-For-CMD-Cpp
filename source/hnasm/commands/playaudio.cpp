@@ -1,9 +1,9 @@
+#define _HAS_STD_BYTE 0
 #include "cmds.h"
 #include "../../audio.h"
 #include <string>
 #ifdef _WIN32
 #include <windows.h>
-#undef PlaySound
 #endif
 #include <sstream>
 using namespace std;

@@ -1,10 +1,10 @@
-﻿#include "audio.h"
+﻿#define _HAS_STD_BYTE 0
+#include "audio.h"
 #include "logUI.h"
 #include "hnasm/hnasm.h"
 #include "boot/boot.h"
 #ifdef _WIN32
 #include <windows.h>
-#undef PlaySound
 #elif __APPLE__
 #include <unistd.h>
 #include <libgen.h>
@@ -18,6 +18,8 @@ using namespace std;
 
 int main(){
     #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     SetConsoleTitleA("Hacknet");
     #elif __APPLE__
     char path[PATH_MAX];

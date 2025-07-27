@@ -1,3 +1,4 @@
+#define _HAS_STD_BYTE 0
 #include "crypto.h"
 #ifdef _WIN32
 #include <windows.h>
@@ -19,16 +20,13 @@ void SHA256Encrypt(const string& rawtext) {
     BYTE hash[32];
     DWORD hashLen = 32;
     if(!CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
-        return "";
     }
     if(!CryptCreateHash(hProv, CALG_SHA_256, 0, 0, &hHash)) {
         CryptReleaseContext(hProv, 0);
-        return "";
     }
     if(!CryptHashData(hHash, (BYTE*)rawtext.c_str(), rawtext.size(), 0)) {
         CryptDestroyHash(hHash);
         CryptReleaseContext(hProv, 0);
-        return "";
     }
     if(CryptGetHashParam(hHash, HP_HASHVAL, hash, &hashLen, 0)) {
         stringstream ss;

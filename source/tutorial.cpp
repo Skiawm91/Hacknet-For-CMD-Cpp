@@ -2,13 +2,6 @@
 #include "hnasm/hnasm.h"
 #include "audio.h"
 #include "cmd.h"
-#include "porthack.h"
-#ifdef _WIN32
-#include <windows.h>
-#else
-#include <unistd.h>
-#endif
-#include <iostream>
 #include <string>
 #include <algorithm>
 using namespace std;
@@ -38,7 +31,6 @@ void Tutorial() {
                     while(true) {
                         HNASM("tutorial/story.chns", "MYSVRCMD");
                         cmd = input;
-                        cout << cmd << "/" << input << endl;
                         if (cmd=="mysvr") {
                             HNASM("tutorial/story.chns", "CNTMYSVR");
                             break;
@@ -89,12 +81,12 @@ void Tutorial() {
                         if (cmd=="ls") {
                             HNASM("tutorial/cd.chns", "LS");
                         } else if (cmd=="cd log") {
-                            HNASM("tutorial/story.chns", "LOG");
+                            HNASM("tutorial/cd.chns", "LOG");
                             break;
                         } else if (cmd=="cd bin") {
-                            HNASM("tutorial/story.chns", "BIN");
+                            HNASM("tutorial/cd.chns", "BIN");
                         } else if (cmd=="cd sys") {
-                            HNASM("tutorial/story.chns", "SYS");
+                            HNASM("tutorial/cd.chns", "SYS");
                         }
                     }
                     HNASM("tutorial/story.chns", "SCAN2");
@@ -144,6 +136,8 @@ void Tutorial() {
                         transform(input.begin(), input.end(), input.begin(), ::tolower);
                         homes = input;
                         if (homes=="home") {
+                            StopAudio();
+                            PlayAudio("AmbientDroneClipped.wav");
                             break;
                         } else if (homes=="exit"){
                             exit(1);

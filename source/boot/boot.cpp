@@ -1,3 +1,4 @@
+#define _HAS_STD_BYTE 0
 #include "boot.h"
 #include "../hnasm/hnasm.h"
 #include "informations/infos.h"

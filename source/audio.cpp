@@ -1,4 +1,5 @@
 // Mac audio play/stop by GPT
+#define _HAS_STD_BYTE 0
 #include "audio.h"
 #ifdef _WIN32
 #include <windows.h>

@@ -1,3 +1,4 @@
+#define _HAS_STD_BYTE 0
 #include "infos.h"
 #ifdef _WIN32
 #include <windows.h>
@@ -93,4 +94,3 @@ void OSInfo() {
     cout << "OS Arch: " << getSysctlString("hw.machine") << endl;
     #endif
 }
-

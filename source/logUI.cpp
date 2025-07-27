@@ -1,3 +1,4 @@
+#define _HAS_STD_BYTE 0
 #include "logUI.h"
 #include "hnasm/hnasm.h"
 #include "crypto/crypto.h"

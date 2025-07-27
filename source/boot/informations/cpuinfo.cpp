@@ -1,3 +1,4 @@
+#define _HAS_STD_BYTE 0
 #include <iostream>
 #ifdef _WIN32
 #include <windows.h>
