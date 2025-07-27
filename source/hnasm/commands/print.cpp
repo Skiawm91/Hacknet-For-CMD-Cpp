@@ -9,3 +9,11 @@ void PRINT(const string& content) {
         cout << content << endl;
     }
 }
+
+void PRINTR(const string& content) {
+    if (content.empty()) {
+        cout << "\r";
+    } else {
+        cout << "\r" << content;
+    }
+}
