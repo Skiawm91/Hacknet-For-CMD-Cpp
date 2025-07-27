@@ -6,10 +6,6 @@
 #include <algorithm>
 using namespace std;
 
-#ifndef _WIN32
-void Sleep(const int& ms) {usleep(ms * 1000);}
-#endif
-
 void Tutorial() {
     extern string input;
     string yn;

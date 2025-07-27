@@ -4,6 +4,7 @@
 #ifdef _WIN32
 #include <windows.h>
 #elif __APPLE__
+#include <iostream>
 #include <AudioToolbox/AudioToolbox.h>
 #include <CoreFoundation/CoreFoundation.h>
 #include <atomic>
@@ -27,13 +28,12 @@ static thread playerThread;
 struct PlayerContext {
     ExtAudioFileRef audioFile = nullptr;
     AudioQueueRef queue = nullptr;
-    UInt64 packetPos = 0;
-    AudioStreamPacketDescription* packetDescs = nullptr;
     UInt32 maxPacketSize = 0;
     UInt32 numPacketsToRead = 1024;
+    AudioStreamBasicDescription clientFormat = {};
 };
 
-static void AQOC(void* inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer) {
+static void AQOutputCallback(void* inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer) {
     PlayerContext* ctx = (PlayerContext*)inUserData;
     if (!keepPlaying.load()) {
         AudioQueueStop(ctx->queue, false);
@@ -44,10 +44,13 @@ static void AQOC(void* inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuf
     bufferList.mNumberBuffers = 1;
     bufferList.mBuffers[0].mData = inBuffer->mAudioData;
     bufferList.mBuffers[0].mDataByteSize = ctx->maxPacketSize * numPackets;
+    bufferList.mBuffers[0].mNumberChannels = ctx->clientFormat.mChannelsPerFrame;
     OSStatus status = ExtAudioFileRead(ctx->audioFile, &numPackets, &bufferList);
     if (status != noErr || numPackets == 0) {
         ExtAudioFileSeek(ctx->audioFile, 0);
         numPackets = ctx->numPacketsToRead;
+        bufferList.mBuffers[0].mData = inBuffer->mAudioData;
+        bufferList.mBuffers[0].mDataByteSize = ctx->maxPacketSize * numPackets;
         status = ExtAudioFileRead(ctx->audioFile, &numPackets, &bufferList);
         if (status != noErr || numPackets == 0) {
             inBuffer->mAudioDataByteSize = 0;
@@ -61,31 +64,40 @@ static void AQOC(void* inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuf
 
 static void playerFunc(string filepath) {
     PlayerContext ctx = {};
-    CFURLRef fileURL = CFURLCreateFromFileSystemRepresentation(nullptr, (const UInt8*)filepath.c_str(), (CFIndex)filepath.size(), false);
-    if (ExtAudioFileOpenURL(fileURL, &ctx.audioFile) != noErr) {
-        CFRelease(fileURL);
+    CFURLRef url = CFURLCreateFromFileSystemRepresentation(nullptr, (const UInt8*)filepath.c_str(), filepath.length(), false);
+    if (!url) {
+        cerr << "Invalid file URL\n";
         return;
     }
-    CFRelease(fileURL);
-    AudioStreamBasicDescription format = {};
-    UInt32 size = sizeof(format);
-    ExtAudioFileGetProperty(ctx.audioFile, kExtAudioFileProperty_FileDataFormat, &size, &format);
-    AudioQueueNewOutput(&format, AQOC, &ctx, nullptr, nullptr, 0, &ctx.queue);
-
-    UInt32 maxPacketSize = 0;
-    size = sizeof(maxPacketSize);
-    ExtAudioFileGetProperty(ctx.audioFile, kExtAudioFileProperty_ClientMaxPacketSize, &size, &maxPacketSize);
-    ctx.maxPacketSize = maxPacketSize;
-    UInt32 bufferByteSize = maxPacketSize * ctx.numPacketsToRead;
-    ctx.packetDescs = nullptr;
+    if (ExtAudioFileOpenURL(url, &ctx.audioFile) != noErr) {
+        CFRelease(url);
+        cerr << "Failed to open audio file\n";
+        return;
+    }
+    CFRelease(url);
+    AudioStreamBasicDescription fileFormat;
+    UInt32 size = sizeof(fileFormat);
+    ExtAudioFileGetProperty(ctx.audioFile, kExtAudioFileProperty_FileDataFormat, &size, &fileFormat);
+    ctx.clientFormat.mSampleRate = fileFormat.mSampleRate;
+    ctx.clientFormat.mFormatID = kAudioFormatLinearPCM;
+    ctx.clientFormat.mFormatFlags = kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked;
+    ctx.clientFormat.mFramesPerPacket = 1;
+    ctx.clientFormat.mChannelsPerFrame = fileFormat.mChannelsPerFrame;
+    ctx.clientFormat.mBitsPerChannel = 16;
+    ctx.clientFormat.mBytesPerPacket = 2 * fileFormat.mChannelsPerFrame;
+    ctx.clientFormat.mBytesPerFrame = 2 * fileFormat.mChannelsPerFrame;
+    ExtAudioFileSetProperty(ctx.audioFile, kExtAudioFileProperty_ClientDataFormat, sizeof(ctx.clientFormat), &ctx.clientFormat);
+    AudioQueueNewOutput(&ctx.clientFormat, AQOutputCallback, &ctx, nullptr, nullptr, 0, &ctx.queue);
+    ctx.maxPacketSize = ctx.clientFormat.mBytesPerPacket;
+    UInt32 bufferByteSize = ctx.maxPacketSize * ctx.numPacketsToRead;
     for (int i = 0; i < 3; ++i) {
         AudioQueueBufferRef buffer;
         AudioQueueAllocateBuffer(ctx.queue, bufferByteSize, &buffer);
-        AQOC(&ctx, ctx.queue, buffer);
+        AQOutputCallback(&ctx, ctx.queue, buffer);
     }
     AudioQueueStart(ctx.queue, nullptr);
     while (keepPlaying.load())
-    this_thread::sleep_for(chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(100));
     AudioQueueStop(ctx.queue, true);
     AudioQueueDispose(ctx.queue, true);
     ExtAudioFileDispose(ctx.audioFile);
