@@ -21,7 +21,7 @@ With C++, just like "Minecraft: Bedrock Edition" lol.
 ## I don't want to use release, but how to build?
 ### Requirements
 1. (Windows) [Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) with "Desktop development with C++"
-   (macOS) "Clang++" - just run `clang++` in terminal.
+1. (macOS) "Clang++" - just run `clang++` in terminal.
 ### Step
 1. Clone repository
 ```
@@ -29,9 +29,9 @@ git clone https://github.com/Skiawm91/Hacknet-For-CMD-Cpp.git
 cd Hacknet-For-CMD-Cpp
 ```
 2. Run `build_win.bat` for Windows
-   (`build_mac.command` for macOS)
-3. If Done, Press Enter key
-4. If has no any errors, should it run
+2. Run `build_mac.command` for macOS
+4. If Done, Press Enter key
+5. If has no any errors, should it run
 ## Thanks
 * [Skiawm91](https://github.com/Skiawm91)
 * [AhQiang](https://github.com/Hoyiqiang)
