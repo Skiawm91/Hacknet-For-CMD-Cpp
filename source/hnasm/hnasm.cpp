@@ -25,6 +25,7 @@ void HNASM(const string& fileName, const string& partName) {
             else if (command=="CLEAR") {CLEAR();}
             else if (command=="PRINT") {PRINT(content);}
             else if (command=="PRINTR") {PRINTR(content);}
+            else if (command=="PRINTWFW") {PRINTWFW(content);}
             else if (command=="PLAYAUDIO") {PLAYAUDIO(content);}
             else if (command=="GETINPUT") {GETINPUT(content);}
             else if (command=="GETINPUTR") {GETINPUTR(content);}

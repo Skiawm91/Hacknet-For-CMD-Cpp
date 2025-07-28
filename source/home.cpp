@@ -20,7 +20,7 @@ int main(){
     #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    SetConsoleTitleA("Hacknet");
+    SetConsoleTitleA("Hacknet For CMD");
     #elif __APPLE__
     char path[PATH_MAX];
     uint32_t size = sizeof(path);
@@ -31,7 +31,7 @@ int main(){
         char* dir = dirname(path_copy);
         chdir(dir);
     }
-    cout << "\033]0;Hacknet\007";
+    cout << "\033]0;Hacknet For CMD\007";
     #endif
     int chse;
     extern string input;

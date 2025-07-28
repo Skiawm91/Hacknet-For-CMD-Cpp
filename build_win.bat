@@ -17,9 +17,9 @@ set files=
 for /r "source" %%f in (*.cpp) do (
     set files=!files! "%%f"
 )
-cl /EHsc /nologo /std:c++20 /utf-8 /FeBuild\\Hacknet.exe /Fobuild\ !files! /link advapi32.lib winmm.lib user32.lib
+cl /EHsc /nologo /std:c++20 /utf-8 /FeBuild\\Hacknet4CMD.exe /Fobuild\ !files! /link advapi32.lib winmm.lib user32.lib
 echo.
 echo Done.
 echo Press Enter to Run Application.
 pause > nul
-start build\Hacknet.exe
+start build\Hacknet4CMD.exe

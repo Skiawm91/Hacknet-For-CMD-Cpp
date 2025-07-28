@@ -1,47 +1,47 @@
+#include "crypto.h"
 #include <iostream>
 #include <string>
-
 #ifdef _WIN32
-#include <conio.h>  // Windows 用於 _getch()
+#include <conio.h>
 #else
 #include <termios.h>
 #include <unistd.h>
 char getch() {
     termios oldt, newt;
-    tcgetattr(STDIN_FILENO, &oldt);             // 取得當前終端設定
+    tcgetattr(STDIN_FILENO, &oldt);
     newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);           // 關閉緩衝區與回顯
-    tcsetattr(STDIN_FILENO, TCSANOW, &newt);    // 套用新設定
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
     char ch = getchar();
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);    // 還原設定
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
     return ch;
 }
 #endif
+using namespace std;
 
-std::string pwdtext;  // 全域變數，儲存輸入的密碼
+string pwdtext;
 
-void readPassword(const std::string& rawtext) {
-    pwdtext.clear();  // 清空舊密碼
-    std::cout << rawtext;  // 顯示提示文字
-
+void HidePwd(const string& rawtext) {
+    pwdtext.clear();
+    cout << rawtext;
     while (true) {
         char ch =
-#ifdef _WIN32
+            #ifdef _WIN32
             _getch();
-#else
+            #else
             getch();
-#endif
+            #endif
         if (ch == '\n' || ch == '\r') {
-            std::cout << std::endl;
+            cout << endl;
             break;
-        } else if (ch == 127 || ch == 8) {  // Backspace
+        } else if (ch == 127 || ch == 8) {
             if (!pwdtext.empty()) {
                 pwdtext.pop_back();
-                std::cout << "\b \b";
+                cout << "\b \b";
             }
         } else if (isprint(ch)) {
             pwdtext += ch;
-            std::cout << '*';
+            cout << '*';
         }
     }
 }

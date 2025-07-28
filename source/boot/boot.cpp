@@ -20,7 +20,6 @@ inline void Sleep(const int& ms) {usleep(ms * 1000);}
 void Boot() {
     HNASM("ui.chns", "LOGO");
     HNASM("ui.chns", "NULL");
-    srand(static_cast<unsigned int>(time(nullptr)));
     string block = "=";
     string loading = "";
     for (int i = 1; i <= 100; ++i) {
