@@ -40,7 +40,7 @@ int main(){
     while(true) {
         HNASM("ui.chns", "LOGO");
         HNASM("ui.chns", "HOME");
-        try {chse = stoi(input);} catch (invalid_argument) {chse = 0;}
+        try {chse = stoi(input);} catch (const invalid_argument) {chse = 0;}
         switch(chse) {
             case 1:
                 LogUI();

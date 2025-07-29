@@ -7,22 +7,29 @@ END_CHANGESONG
 BEGIN_TUTORIAL1
 CLEAR
 PRINT
-PRINT tutorial mode
+PRINT Tutorial
 PRINT
 PRINT 你現在處於危險之中!
 PRINT 請用最快的速度完成教學!
-PRINT 如果準備好了請輸入y 要跳過教學請輸入skip
 PRINT
-GETINPUT choose: 
+PRINT 1) 繼續
+PRINT
 END_TUTORIAL1
+BEGIN_TR1CHSE
+GETINPUTR > 
+END_TR1CHSE
 BEGIN_TUTORIAL2
 CLEAR
 PRINT
-PRINT tutorial mode
+PRINT Tutorial
 PRINT
 PRINT 入侵他人終端裝置將會違反中華民國刑法第358條
 PRINT 從現在開始 為自己的行為負責吧!
-PRINT 如果準備好了請輸入y繼續
 PRINT
-GETINPUT choose: 
+PRINT 1) 繼續
+PRINT 2) 跳過教學
+PRINT
 END_TUTORIAL2
+BEGIN_TR2CHSE
+GETINPUTR > 
+END_TR2CHSE

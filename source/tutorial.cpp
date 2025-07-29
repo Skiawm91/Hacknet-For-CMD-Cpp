@@ -2,26 +2,27 @@
 #include "hnasm/hnasm.h"
 #include "audio.h"
 #include "cmd.h"
+#include <iostream>
 #include <string>
 #include <algorithm>
 using namespace std;
 
 void Tutorial() {
     extern string input;
-    string yn;
+    int chse;
     string cmd;
     HNASM("tutorial/failsafe.chns", "FAILSAFE");
     HNASM("tutorial/tutorial.chns", "CHANGESONG");
+    HNASM("tutorial/tutorial.chns", "TUTORIAL1");
     while(true) {
-        HNASM("tutorial/tutorial.chns", "TUTORIAL1");
-        transform(input.begin(), input.end(), input.begin(), ::tolower);
-        yn = input;
-        if (yn=="y") {
+        HNASM("tutorial/tutorial.chns", "TR1CHSE");
+        try {chse = stoi(input);} catch (const invalid_argument&) {chse = 0;}
+        if (chse = 1) {
+            HNASM("tutorial/tutorial.chns", "TUTORIAL2");
             while(true) {
-                HNASM("tutorial/tutorial.chns", "TUTORIAL2");
-                transform(input.begin(), input.end(), input.begin(), ::tolower);
-                yn = input;
-                if (yn=="y") {
+                HNASM("tutorial/tutorial.chns", "TR2CHSE");
+                try {chse = stoi(input);} catch (const invalid_argument&) {chse = 0;}
+                if (chse = 1) {
                     HNASM("tutorial/story.chns", "INITIAL");
                     HNASM("tutorial/story.chns", "MYSVR");
                     while(true) {
@@ -140,14 +141,11 @@ void Tutorial() {
                         }
                     }
                     return;
-                } else if (yn=="n") {
+                } else if (chse = 2) {
                     Cmd();
                     break;
                 }
             }
-        } else if (yn=="skip") {
-            Cmd();
-            break;
         }
     }
 }

@@ -1,0 +1,808 @@
+BEGIN_BOOT
+CLEAR
+PRINT HN4CGraphics: mounting volume (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.013
+PRINT HN4CNetwork: started (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.013
+PRINT HN4CAudio: verifying cache (/dev/disk1s1) without debug symbols
+WAIT 0.002
+PRINT HN4C: disabled (/System/Library/Core) with exit code 0
+WAIT 0.008
+PRINT Launchd: started (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.001
+PRINT HN4CAudio: verifying cache (/etc/hcfsconf) with exit code 0
+WAIT 0.004
+PRINT HN4C: loaded successfully (/usr/libexec) without debug symbols
+WAIT 0.014
+PRINT PowerMgmt: disabled (/etc/hcfsconf) because of missing dependency
+WAIT 0.007
+PRINT HCFS: restarted (/etc/hcfsconf) with exit code 0
+WAIT 0.015
+PRINT Launchd: mounting volume (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.005
+PRINT Launchd: enabled (/etc/hcfsconf) because of missing dependency
+WAIT 0.012
+PRINT Launchd: started (/etc/hcfsconf) without debug symbols
+WAIT 0.007
+PRINT HN4CNetwork: verifying cache (/etc/hcfsconf) because of missing dependency
+WAIT 0.006
+PRINT Kernel: restarted (/usr/libexec) after 129s
+WAIT 0.011
+PRINT HN4C: restarted (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.003
+PRINT PMAP: failed to start (/etc/hcfsconf) with exit code 0
+WAIT 0.01
+PRINT PowerMgmt: failed to start (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.008
+PRINT HN4CGraphics: initialized (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.008
+PRINT HN4CIOMMU: disabled (/System/Library/Core) because of missing dependency
+WAIT 0.004
+PRINT PMAP: started (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.011
+PRINT PMAP: loaded successfully (/usr/libexec) without debug symbols
+WAIT 0.006
+PRINT Launchd: mounting volume (/usr/libexec) with warning code 0x2F1A
+WAIT 0.013
+PRINT Kernel: waiting for dependencies (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.002
+PRINT HCFS: disabled (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.004
+PRINT HN4C: started (/System/Library/Core) because of missing dependency
+WAIT 0.013
+PRINT HN4CAudio: initialized (/System/Library/Core) with exit code 0
+WAIT 0.012
+PRINT Kernel: loaded successfully (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.002
+PRINT HN4CAudio: initialized (/etc/hcfsconf) because of missing dependency
+WAIT 0.004
+PRINT Launchd: started (/System/Library/Core) because of missing dependency
+WAIT 0.01
+PRINT PMAP: started (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.002
+PRINT HN4CGraphics: verifying cache (/usr/libexec) without debug symbols
+WAIT 0.007
+PRINT HN4CGraphics: disabled (/etc/hcfsconf) without debug symbols
+WAIT 0.014
+PRINT HCFS: enabled (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.013
+PRINT HN4CNetwork: loaded successfully (/usr/libexec) because of missing dependency
+WAIT 0.011
+PRINT HN4CIOMMU: loaded successfully (/dev/disk1s1) without debug symbols
+WAIT 0.01
+PRINT PowerMgmt: waiting for dependencies (/dev/disk1s1) without debug symbols
+WAIT 0.011
+PRINT HN4C: mounting volume (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.015
+PRINT Kernel: checking integrity (/System/Library/Core) because of missing dependency
+WAIT 0.013
+PRINT PMAP: checking integrity (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.007
+PRINT Launchd: verifying cache (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.007
+PRINT HN4CIOMMU: mounting volume (/usr/libexec) with exit code 0
+WAIT 0.002
+PRINT Kernel: checking integrity (/etc/hcfsconf) with exit code 0
+WAIT 0.01
+PRINT HCFS: restarted (/usr/libexec) with exit code 0
+WAIT 0.014
+PRINT HN4CAudio: mounting volume (/usr/libexec) because of missing dependency
+WAIT 0.01
+PRINT Launchd: mounting volume (/etc/hcfsconf) after 129s
+WAIT 0.002
+PRINT PMAP: enabled (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4CAudio: checking integrity (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.008
+PRINT PMAP: enabled (/usr/libexec) with warning code 0x2F1A
+WAIT 0.013
+PRINT HN4CAudio: loaded successfully (/System/Extensions/Graphicskext) after 129s
+WAIT 0.005
+PRINT PMAP: disabled (/usr/libexec) with exit code 0
+WAIT 0.002
+PRINT HCFS: mounting volume (/etc/hcfsconf) with exit code 0
+WAIT 0.002
+PRINT HN4CIOMMU: enabled (/usr/libexec) because of missing dependency
+WAIT 0.01
+PRINT HN4C: loaded successfully (/System/Extensions/Graphicskext) after 129s
+WAIT 0.01
+PRINT Kernel: mounting volume (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.005
+PRINT HCFS: enabled (/System/Library/Core) due to timeout
+WAIT 0.003
+PRINT Launchd: mounting volume (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.001
+PRINT PMAP: loaded successfully (/etc/hcfsconf) because of missing dependency
+WAIT 0.008
+PRINT HCFS: verifying cache (/usr/libexec) without debug symbols
+WAIT 0.007
+PRINT HN4CIOMMU: verifying cache (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.007
+PRINT HN4CNetwork: loaded successfully (/etc/hcfsconf) due to timeout
+WAIT 0.01
+PRINT HN4CAudio: enabled (/usr/libexec) with warning code 0x2F1A
+WAIT 0.014
+PRINT PMAP: loaded successfully (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.009
+PRINT HN4CNetwork: verifying cache (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.006
+PRINT HN4CNetwork: failed to start (/dev/disk1s1) without debug symbols
+WAIT 0.014
+PRINT HN4CGraphics: disabled (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.005
+PRINT HN4CGraphics: verifying cache (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.006
+PRINT PowerMgmt: loaded successfully (/dev/disk1s1) with exit code 0
+WAIT 0.012
+PRINT HN4CIOMMU: restarted (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.007
+PRINT Launchd: mounting volume (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4CIOMMU: disabled (/System/Library/Core) after 129s
+WAIT 0.004
+PRINT HCFS: initialized (/etc/hcfsconf) without debug symbols
+WAIT 0.008
+PRINT Launchd: disabled (/System/Library/Core) with exit code 0
+WAIT 0.01
+PRINT Kernel: restarted (/usr/libexec) with warning code 0x2F1A
+WAIT 0.003
+PRINT HN4CIOMMU: loaded successfully (/dev/disk1s1) with exit code 0
+WAIT 0.006
+PRINT HCFS: initialized (/etc/hcfsconf) due to timeout
+WAIT 0.004
+PRINT Kernel: enabled (/System/Library/Core) because of missing dependency
+WAIT 0.007
+PRINT HN4CNetwork: restarted (/dev/disk1s1) because of missing dependency
+WAIT 0.014
+PRINT Kernel: restarted (/usr/libexec) due to timeout
+WAIT 0.013
+PRINT HCFS: verifying cache (/etc/hcfsconf) after 129s
+WAIT 0.008
+PRINT HN4CAudio: checking integrity (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.001
+PRINT Kernel: restarted (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.014
+PRINT HN4CAudio: loaded successfully (/usr/libexec) due to timeout
+WAIT 0.013
+PRINT HN4C: disabled (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.011
+PRINT Kernel: failed to start (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.012
+PRINT HN4CGraphics: disabled (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.014
+PRINT HN4CAudio: mounting volume (/usr/libexec) without debug symbols
+WAIT 0.009
+PRINT HN4CNetwork: failed to start (/System/Library/Core) because of missing dependency
+WAIT 0.009
+PRINT HN4CAudio: checking integrity (/System/Library/Core) due to timeout
+WAIT 0.014
+PRINT HN4C: disabled (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.014
+PRINT PowerMgmt: started (/System/Library/Core) after 129s
+WAIT 0.003
+PRINT HN4CIOMMU: checking integrity (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.014
+PRINT HN4C: verifying cache (/System/Library/Core) due to timeout
+WAIT 0.003
+PRINT HN4CNetwork: loaded successfully (/dev/disk1s1) after 129s
+WAIT 0.005
+PRINT HN4CIOMMU: checking integrity (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.01
+PRINT HCFS: waiting for dependencies (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.015
+PRINT HN4CGraphics: failed to start (/usr/libexec) after 129s
+WAIT 0.001
+PRINT HN4CGraphics: disabled (/usr/libexec) with exit code 0
+WAIT 0.008
+PRINT HN4CIOMMU: checking integrity (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.005
+PRINT HN4CNetwork: initialized (/etc/hcfsconf) because of missing dependency
+WAIT 0.006
+PRINT PMAP: disabled (/System/Library/Core) after 129s
+WAIT 0.013
+PRINT PMAP: waiting for dependencies (/System/Library/Core) due to timeout
+WAIT 0.006
+PRINT HN4CAudio: waiting for dependencies (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.004
+PRINT HCFS: loaded successfully (/etc/hcfsconf) due to timeout
+WAIT 1
+PRINT HN4CIOMMU: restarted (/System/Library/Core) due to timeout
+WAIT 0.006
+PRINT HN4CIOMMU: loaded successfully (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.009
+PRINT HN4CNetwork: waiting for dependencies (/dev/disk1s1) because of missing dependency
+WAIT 0.007
+PRINT PMAP: verifying cache (/etc/hcfsconf) after 129s
+WAIT 0.011
+PRINT Launchd: disabled (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.009
+PRINT HN4CIOMMU: initialized (/usr/libexec) due to timeout
+WAIT 0.007
+PRINT PMAP: restarted (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.006
+PRINT Kernel: failed to start (/etc/hcfsconf) due to timeout
+WAIT 0.014
+PRINT Launchd: started (/usr/libexec) without debug symbols
+WAIT 0.004
+PRINT PMAP: waiting for dependencies (/usr/libexec) with exit code 0
+WAIT 0.003
+PRINT Launchd: failed to start (/etc/hcfsconf) without debug symbols
+WAIT 0.014
+PRINT HN4CNetwork: checking integrity (/usr/libexec) after 129s
+WAIT 0.011
+PRINT HN4CGraphics: loaded successfully (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.015
+PRINT Launchd: started (/usr/libexec) with warning code 0x2F1A
+WAIT 0.008
+PRINT PowerMgmt: failed to start (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.012
+PRINT HN4CIOMMU: loaded successfully (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.009
+PRINT HCFS: checking integrity (/usr/libexec) with warning code 0x2F1A
+WAIT 0.012
+PRINT PMAP: restarted (/usr/libexec) due to timeout
+WAIT 0.009
+PRINT HN4C: verifying cache (/usr/libexec) without debug symbols
+WAIT 0.013
+PRINT HN4C: restarted (/System/Library/Core) after 129s
+WAIT 0.003
+PRINT HCFS: checking integrity (/dev/disk1s1) with exit code 0
+WAIT 0.013
+PRINT Kernel: restarted (/etc/hcfsconf) after 129s
+WAIT 0.001
+PRINT HCFS: failed to start (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.005
+PRINT PowerMgmt: mounting volume (/etc/hcfsconf) after 129s
+WAIT 0.009
+PRINT PMAP: mounting volume (/System/Library/Core) after 129s
+WAIT 0.005
+PRINT Launchd: loaded successfully (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.013
+PRINT Launchd: checking integrity (/usr/libexec) with exit code 0
+WAIT 0.006
+PRINT HN4C: disabled (/System/Library/Core) due to timeout
+WAIT 0.013
+PRINT HN4CAudio: verifying cache (/usr/libexec) due to timeout
+WAIT 0.013
+PRINT HN4C: verifying cache (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.011
+PRINT HN4C: loaded successfully (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.007
+PRINT HCFS: checking integrity (/System/Library/Core) because of missing dependency
+WAIT 0.008
+PRINT HCFS: started (/System/Library/Core) without debug symbols
+WAIT 0.004
+PRINT HN4CAudio: started (/usr/libexec) after 129s
+WAIT 0.006
+PRINT HN4CIOMMU: enabled (/System/Library/Core) because of missing dependency
+WAIT 0.007
+PRINT PMAP: checking integrity (/System/Library/Core) because of missing dependency
+WAIT 0.006
+PRINT HN4CIOMMU: restarted (/usr/libexec) because of missing dependency
+WAIT 0.005
+PRINT PowerMgmt: mounting volume (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.007
+PRINT HN4CGraphics: disabled (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.013
+PRINT HN4CGraphics: mounting volume (/etc/hcfsconf) without debug symbols
+WAIT 0.005
+PRINT HCFS: mounting volume (/System/Library/Core) after 129s
+WAIT 0.004
+PRINT Launchd: verifying cache (/etc/hcfsconf) after 129s
+WAIT 0.011
+PRINT HN4CIOMMU: loaded successfully (/dev/disk1s1) with exit code 0
+WAIT 0.003
+PRINT HN4CGraphics: loaded successfully (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4C: checking integrity (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.006
+PRINT HN4C: loaded successfully (/System/Extensions/Graphicskext) after 129s
+WAIT 0.009
+PRINT PMAP: checking integrity (/dev/disk1s1) because of missing dependency
+WAIT 0.012
+PRINT HN4CIOMMU: verifying cache (/etc/hcfsconf) because of missing dependency
+WAIT 0.004
+PRINT PowerMgmt: started (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.009
+PRINT HN4CAudio: loaded successfully (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.002
+PRINT HN4C: loaded successfully (/etc/hcfsconf) because of missing dependency
+WAIT 0.01
+PRINT HN4CIOMMU: started (/System/Library/Core) after 129s
+WAIT 0.002
+PRINT HN4CGraphics: enabled (/etc/hcfsconf) after 129s
+WAIT 0.015
+PRINT HN4CNetwork: started (/usr/libexec) without debug symbols
+WAIT 0.008
+PRINT HN4CGraphics: verifying cache (/System/Library/Core) after 129s
+WAIT 0.002
+PRINT HCFS: disabled (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.009
+PRINT Kernel: disabled (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.014
+PRINT HN4CAudio: enabled (/etc/hcfsconf) due to timeout
+WAIT 0.007
+PRINT HN4CIOMMU: initialized (/usr/libexec) without debug symbols
+WAIT 0.001
+PRINT PowerMgmt: checking integrity (/System/Library/Core) due to timeout
+WAIT 0.004
+PRINT PowerMgmt: enabled (/usr/libexec) without debug symbols
+WAIT 0.012
+PRINT HN4CAudio: verifying cache (/dev/disk1s1) without debug symbols
+WAIT 0.014
+PRINT HN4C: mounting volume (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.008
+PRINT PMAP: checking integrity (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.007
+PRINT PMAP: checking integrity (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.011
+PRINT HN4CAudio: mounting volume (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.013
+PRINT HN4CAudio: disabled (/etc/hcfsconf) due to timeout
+WAIT 0.012
+PRINT HN4CIOMMU: restarted (/usr/libexec) due to timeout
+WAIT 0.014
+PRINT HN4C: checking integrity (/usr/libexec) without debug symbols
+WAIT 0.004
+PRINT HN4CGraphics: waiting for dependencies (/etc/hcfsconf) without debug symbols
+WAIT 0.004
+PRINT HN4C: mounting volume (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.014
+PRINT HN4C: disabled (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.004
+PRINT Launchd: started (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.004
+PRINT HN4CGraphics: failed to start (/dev/disk1s1) because of missing dependency
+WAIT 0.005
+PRINT HN4CIOMMU: initialized (/dev/disk1s1) with exit code 0
+WAIT 0.011
+PRINT HCFS: disabled (/usr/libexec) with exit code 0
+WAIT 0.003
+PRINT Kernel: mounting volume (/etc/hcfsconf) because of missing dependency
+WAIT 0.01
+PRINT Launchd: waiting for dependencies (/usr/libexec) due to timeout
+WAIT 0.007
+PRINT PMAP: failed to start (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.01
+PRINT Kernel: disabled (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.01
+PRINT PowerMgmt: mounting volume (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.003
+PRINT HCFS: verifying cache (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.01
+PRINT PMAP: disabled (/System/Extensions/Graphicskext) after 129s
+WAIT 0.003
+PRINT PowerMgmt: waiting for dependencies (/dev/disk1s1) with exit code 0
+WAIT 0.008
+PRINT HN4CGraphics: mounting volume (/etc/hcfsconf) without debug symbols
+WAIT 0.002
+PRINT PMAP: waiting for dependencies (/dev/disk1s1) due to timeout
+WAIT 0.001
+PRINT HN4CGraphics: waiting for dependencies (/dev/disk1s1) after 129s
+WAIT 0.002
+PRINT Kernel: waiting for dependencies (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.013
+PRINT Launchd: loaded successfully (/etc/hcfsconf) with exit code 0
+WAIT 0.01
+PRINT HN4CNetwork: initialized (/System/Library/Core) because of missing dependency
+WAIT 0.002
+PRINT HN4CNetwork: waiting for dependencies (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.007
+PRINT HN4CAudio: checking integrity (/usr/libexec) because of missing dependency
+WAIT 0.005
+PRINT PowerMgmt: restarted (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.007
+PRINT HCFS: waiting for dependencies (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.008
+PRINT Kernel: failed to start (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.003
+PRINT Kernel: waiting for dependencies (/System/Library/Core) due to timeout
+WAIT 0.009
+PRINT Kernel: failed to start (/etc/hcfsconf) after 129s
+WAIT 0.003
+PRINT Kernel: waiting for dependencies (/dev/disk1s1) because of missing dependency
+WAIT 0.012
+PRINT HN4CIOMMU: waiting for dependencies (/usr/libexec) without debug symbols
+WAIT 0.008
+PRINT HCFS: loaded successfully (/etc/hcfsconf) without debug symbols
+WAIT 0.001
+PRINT HCFS: checking integrity (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.007
+PRINT PowerMgmt: checking integrity (/dev/disk1s1) without debug symbols
+WAIT 0.008
+PRINT Launchd: initialized (/usr/libexec) because of missing dependency
+WAIT 0.009
+PRINT Launchd: started (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.012
+PRINT HCFS: disabled (/usr/libexec) without debug symbols
+WAIT 0.007
+PRINT HN4CNetwork: verifying cache (/System/Library/Core) after 129s
+WAIT 0.006
+PRINT PowerMgmt: checking integrity (/usr/libexec) without debug symbols
+WAIT 0.011
+PRINT HN4CIOMMU: mounting volume (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.013
+PRINT HCFS: checking integrity (/System/Library/Core) without debug symbols
+WAIT 0.004
+PRINT HN4CGraphics: started (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.004
+PRINT HCFS: restarted (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.006
+PRINT HN4CGraphics: loaded successfully (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.01
+PRINT Launchd: loaded successfully (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.01
+PRINT HN4CIOMMU: initialized (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.012
+PRINT HN4CIOMMU: enabled (/dev/disk1s1) without debug symbols
+WAIT 0.012
+PRINT HN4CIOMMU: waiting for dependencies (/usr/libexec) after 129s
+WAIT 0.009
+PRINT HN4C: enabled (/usr/libexec) after 129s
+WAIT 0.008
+PRINT HCFS: mounting volume (/dev/disk1s1) with exit code 0
+WAIT 0.01
+PRINT HN4CIOMMU: waiting for dependencies (/etc/hcfsconf) without debug symbols
+WAIT 0.006
+PRINT Launchd: waiting for dependencies (/usr/libexec) without debug symbols
+WAIT 0.008
+PRINT PowerMgmt: initialized (/usr/libexec) without debug symbols
+WAIT 0.008
+PRINT HN4CNetwork: enabled (/etc/hcfsconf) due to timeout
+WAIT 0.006
+PRINT HN4CGraphics: started (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.009
+PRINT HCFS: mounting volume (/System/Library/Core) due to timeout
+WAIT 0.01
+PRINT PowerMgmt: enabled (/System/Library/Core) after 129s
+WAIT 0.005
+PRINT HN4C: restarted (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.014
+PRINT HN4CIOMMU: failed to start (/System/Library/Core) with exit code 0
+WAIT 0.004
+PRINT PMAP: checking integrity (/System/Extensions/Graphicskext) after 129s
+WAIT 0.011
+PRINT Launchd: mounting volume (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.005
+PRINT HN4CAudio: verifying cache (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.004
+PRINT HN4CGraphics: verifying cache (/dev/disk1s1) without debug symbols
+WAIT 0.002
+PRINT HCFS: restarted (/usr/libexec) because of missing dependency
+WAIT 0.005
+PRINT HN4CAudio: enabled (/System/Extensions/Graphicskext) after 129s
+WAIT 0.007
+PRINT HCFS: loaded successfully (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.005
+PRINT HN4CNetwork: started (/usr/libexec) because of missing dependency
+WAIT 0.014
+PRINT HN4CNetwork: failed to start (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.004
+PRINT HN4CNetwork: restarted (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.011
+PRINT HN4CGraphics: waiting for dependencies (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.003
+PRINT HN4CNetwork: loaded successfully (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.005
+PRINT Launchd: mounting volume (/System/Library/Core) because of missing dependency
+WAIT 0.002
+PRINT HN4C: mounting volume (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.002
+PRINT Launchd: mounting volume (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.014
+PRINT HN4CNetwork: disabled (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.001
+PRINT HN4CNetwork: started (/dev/disk1s1) because of missing dependency
+WAIT 0.008
+PRINT PMAP: disabled (/etc/hcfsconf) with exit code 0
+WAIT 0.006
+PRINT Launchd: loaded successfully (/etc/hcfsconf) due to timeout
+WAIT 0.002
+PRINT HN4CGraphics: waiting for dependencies (/etc/hcfsconf) because of missing dependency
+WAIT 0.007
+PRINT HN4C: initialized (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.014
+PRINT Kernel: loaded successfully (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.008
+PRINT PowerMgmt: enabled (/System/Library/Core) with warning code 0x2F1A
+WAIT 1
+PRINT HN4CGraphics: disabled (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.01
+PRINT Launchd: mounting volume (/etc/hcfsconf) after 129s
+WAIT 0.011
+PRINT HN4CGraphics: waiting for dependencies (/etc/hcfsconf) without debug symbols
+WAIT 0.015
+PRINT Launchd: enabled (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.002
+PRINT HN4C: enabled (/usr/libexec) after 129s
+WAIT 0.008
+PRINT PowerMgmt: checking integrity (/dev/disk1s1) due to timeout
+WAIT 0.009
+PRINT HN4CIOMMU: initialized (/System/Library/Core) without debug symbols
+WAIT 0.005
+PRINT HN4CNetwork: restarted (/etc/hcfsconf) with exit code 0
+WAIT 0.012
+PRINT Kernel: disabled (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.006
+PRINT HN4CAudio: enabled (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.001
+PRINT PowerMgmt: failed to start (/System/Extensions/Graphicskext) after 129s
+WAIT 0.005
+PRINT PMAP: failed to start (/etc/hcfsconf) without debug symbols
+WAIT 0.011
+PRINT HCFS: verifying cache (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.013
+PRINT HN4CIOMMU: failed to start (/etc/hcfsconf) with exit code 0
+WAIT 0.01
+PRINT Kernel: started (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.014
+PRINT PMAP: loaded successfully (/etc/hcfsconf) after 129s
+WAIT 0.015
+PRINT HCFS: started (/usr/libexec) because of missing dependency
+WAIT 0.004
+PRINT HCFS: mounting volume (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.014
+PRINT PowerMgmt: disabled (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.008
+PRINT HN4CGraphics: enabled (/usr/libexec) with exit code 0
+WAIT 0.011
+PRINT HN4CNetwork: checking integrity (/usr/libexec) because of missing dependency
+WAIT 0.004
+PRINT PowerMgmt: failed to start (/usr/libexec) without debug symbols
+WAIT 0.007
+PRINT HN4CNetwork: loaded successfully (/usr/libexec) with warning code 0x2F1A
+WAIT 0.007
+PRINT HN4CGraphics: loaded successfully (/private/var/db/comhn4ckexts) because of missing dependency
+WAIT 0.013
+PRINT HN4CNetwork: initialized (/dev/disk1s1) without debug symbols
+WAIT 0.011
+PRINT HN4CNetwork: initialized (/System/Library/Core) after 129s
+WAIT 0.009
+PRINT HN4CNetwork: restarted (/usr/libexec) due to timeout
+WAIT 0.008
+PRINT HN4CAudio: enabled (/usr/libexec) after 129s
+WAIT 0.014
+PRINT HN4C: verifying cache (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.009
+PRINT PMAP: waiting for dependencies (/usr/libexec) without debug symbols
+WAIT 0.003
+PRINT Kernel: started (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.008
+PRINT HN4CIOMMU: waiting for dependencies (/etc/hcfsconf) due to timeout
+WAIT 0.004
+PRINT HN4CIOMMU: failed to start (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4CIOMMU: failed to start (/System/Library/Core) due to timeout
+WAIT 0.008
+PRINT HN4C: initialized (/System/Library/Core) with exit code 0
+WAIT 0.003
+PRINT Launchd: enabled (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.003
+PRINT HN4CNetwork: initialized (/System/Library/Core) with exit code 0
+WAIT 0.004
+PRINT Launchd: waiting for dependencies (/usr/libexec) with warning code 0x2F1A
+WAIT 0.014
+PRINT HN4CNetwork: failed to start (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.006
+PRINT PMAP: checking integrity (/System/Extensions/Graphicskext) after 129s
+WAIT 0.003
+PRINT HN4C: checking integrity (/System/Extensions/Graphicskext) after 129s
+WAIT 0.004
+PRINT Launchd: loaded successfully (/etc/hcfsconf) without debug symbols
+WAIT 0.009
+PRINT Launchd: loaded successfully (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.004
+PRINT PowerMgmt: initialized (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.008
+PRINT PowerMgmt: waiting for dependencies (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.009
+PRINT HN4C: initialized (/System/Library/Core) because of missing dependency
+WAIT 0.01
+PRINT HN4CIOMMU: failed to start (/System/Library/Core) with exit code 0
+WAIT 0.01
+PRINT HCFS: verifying cache (/System/Library/Core) after 129s
+WAIT 0.006
+PRINT HN4CNetwork: mounting volume (/dev/disk1s1) after 129s
+WAIT 0.005
+PRINT HN4CIOMMU: disabled (/usr/libexec) with exit code 0
+WAIT 0.013
+PRINT HN4CNetwork: mounting volume (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.005
+PRINT PowerMgmt: verifying cache (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.007
+PRINT Launchd: failed to start (/etc/hcfsconf) after 129s
+WAIT 0.004
+PRINT HN4CNetwork: failed to start (/etc/hcfsconf) because of missing dependency
+WAIT 0.014
+PRINT HN4CIOMMU: waiting for dependencies (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.013
+PRINT Launchd: verifying cache (/dev/disk1s1) because of missing dependency
+WAIT 0.013
+PRINT HN4CAudio: verifying cache (/System/Library/Core) without debug symbols
+WAIT 0.009
+PRINT HN4C: disabled (/usr/libexec) with warning code 0x2F1A
+WAIT 0.004
+PRINT Launchd: waiting for dependencies (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.002
+PRINT HCFS: mounting volume (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.015
+PRINT Launchd: restarted (/usr/libexec) with warning code 0x2F1A
+WAIT 0.004
+PRINT HN4CNetwork: initialized (/dev/disk1s1) due to timeout
+WAIT 0.002
+PRINT HN4CAudio: mounting volume (/usr/libexec) without debug symbols
+WAIT 0.008
+PRINT HCFS: verifying cache (/usr/libexec) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4CIOMMU: mounting volume (/private/var/db/comhn4ckexts) after 129s
+WAIT 0.007
+PRINT PowerMgmt: waiting for dependencies (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.006
+PRINT HN4C: initialized (/System/Library/Core) without debug symbols
+WAIT 0.012
+PRINT HN4CIOMMU: failed to start (/usr/libexec) with warning code 0x2F1A
+WAIT 0.012
+PRINT HN4CIOMMU: loaded successfully (/dev/disk1s1) because of missing dependency
+WAIT 0.011
+PRINT HN4CIOMMU: waiting for dependencies (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.005
+PRINT HCFS: enabled (/dev/disk1s1) due to timeout
+WAIT 0.004
+PRINT HN4C: waiting for dependencies (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.002
+PRINT Launchd: disabled (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.012
+PRINT PowerMgmt: initialized (/System/Library/Core) without debug symbols
+WAIT 0.004
+PRINT HN4CGraphics: started (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.014
+PRINT HN4CAudio: enabled (/usr/libexec) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4CIOMMU: mounting volume (/System/Extensions/Graphicskext) after 129s
+WAIT 0.012
+PRINT HN4CGraphics: restarted (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.009
+PRINT HCFS: verifying cache (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.01
+PRINT Launchd: disabled (/etc/hcfsconf) with exit code 0
+WAIT 0.006
+PRINT HN4CAudio: disabled (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.003
+PRINT Kernel: started (/private/var/db/comhn4ckexts) due to timeout
+WAIT 0.002
+PRINT HN4CIOMMU: loaded successfully (/System/Extensions/Graphicskext) with warning code 0x2F1A
+WAIT 0.008
+PRINT PowerMgmt: initialized (/System/Library/Core) with exit code 0
+WAIT 0.006
+PRINT Launchd: loaded successfully (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.013
+PRINT HN4CGraphics: checking integrity (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.008
+PRINT HN4CGraphics: disabled (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.002
+PRINT HN4C: failed to start (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.002
+PRINT PowerMgmt: disabled (/usr/libexec) after 129s
+WAIT 0.006
+PRINT HCFS: started (/System/Library/Core) without debug symbols
+WAIT 0.001
+PRINT HCFS: restarted (/etc/hcfsconf) with exit code 0
+WAIT 0.008
+PRINT HN4CGraphics: enabled (/System/Library/Core) after 129s
+WAIT 0.002
+PRINT HN4CAudio: initialized (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.007
+PRINT HN4CAudio: waiting for dependencies (/private/var/db/comhn4ckexts) with exit code 0
+WAIT 0.014
+PRINT HN4CNetwork: disabled (/usr/libexec) because of missing dependency
+WAIT 0.008
+PRINT HN4CNetwork: failed to start (/usr/libexec) with warning code 0x2F1A
+WAIT 0.015
+PRINT Launchd: started (/System/Library/Core) because of missing dependency
+WAIT 0.012
+PRINT PowerMgmt: failed to start (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.013
+PRINT HN4C: verifying cache (/System/Extensions/Graphicskext) after 129s
+WAIT 0.005
+PRINT PMAP: failed to start (/System/Library/Core) because of missing dependency
+WAIT 1
+PRINT Kernel: restarted (/usr/libexec) because of missing dependency
+WAIT 0.011
+PRINT HN4CGraphics: disabled (/usr/libexec) without debug symbols
+WAIT 0.001
+PRINT PMAP: waiting for dependencies (/etc/hcfsconf) with warning code 0x2F1A
+WAIT 0.013
+PRINT Kernel: initialized (/etc/hcfsconf) because of missing dependency
+WAIT 0.013
+PRINT HN4CNetwork: waiting for dependencies (/etc/hcfsconf) after 129s
+WAIT 0.009
+PRINT PMAP: verifying cache (/System/Library/Core) with exit code 0
+WAIT 0.011
+PRINT Launchd: verifying cache (/System/Library/Core) with exit code 0
+WAIT 0.014
+PRINT PMAP: checking integrity (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.01
+PRINT Kernel: restarted (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.013
+PRINT HN4CGraphics: initialized (/dev/disk1s1) after 129s
+WAIT 0.012
+PRINT HCFS: enabled (/usr/libexec) due to timeout
+WAIT 0.004
+PRINT HN4CGraphics: failed to start (/dev/disk1s1) due to timeout
+WAIT 0.009
+PRINT HN4CAudio: restarted (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.005
+PRINT Launchd: started (/etc/hcfsconf) due to timeout
+WAIT 0.012
+PRINT PMAP: verifying cache (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.007
+PRINT HN4CGraphics: restarted (/etc/hcfsconf) after 129s
+WAIT 0.012
+PRINT HCFS: enabled (/System/Library/Core) with warning code 0x2F1A
+WAIT 0.004
+PRINT HN4CAudio: loaded successfully (/System/Extensions/Graphicskext) without debug symbols
+WAIT 0.011
+PRINT PowerMgmt: checking integrity (/etc/hcfsconf) due to timeout
+WAIT 0.013
+PRINT HN4CIOMMU: mounting volume (/System/Extensions/Graphicskext) after 129s
+WAIT 0.009
+PRINT HN4CAudio: restarted (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.006
+PRINT Launchd: initialized (/usr/libexec) with warning code 0x2F1A
+WAIT 0.014
+PRINT Launchd: enabled (/usr/libexec) due to timeout
+WAIT 0.009
+PRINT PMAP: loaded successfully (/dev/disk1s1) because of missing dependency
+WAIT 0.013
+PRINT PMAP: disabled (/dev/disk1s1) with exit code 0
+WAIT 0.008
+PRINT PowerMgmt: checking integrity (/etc/hcfsconf) after 129s
+WAIT 0.003
+PRINT HN4CIOMMU: failed to start (/System/Library/Core) because of missing dependency
+WAIT 0.01
+PRINT PMAP: disabled (/etc/hcfsconf) without debug symbols
+WAIT 0.014
+PRINT HN4CGraphics: waiting for dependencies (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.005
+PRINT Launchd: loaded successfully (/System/Extensions/Graphicskext) after 129s
+WAIT 0.011
+PRINT HN4CGraphics: checking integrity (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.011
+PRINT Launchd: started (/usr/libexec) with exit code 0
+WAIT 0.004
+PRINT HN4CNetwork: loaded successfully (/usr/libexec) due to timeout
+WAIT 0.014
+PRINT HN4C: failed to start (/dev/disk1s1) with warning code 0x2F1A
+WAIT 0.004
+PRINT HN4C: verifying cache (/System/Library/Core) due to timeout
+WAIT 0.007
+PRINT PMAP: failed to start (/System/Extensions/Graphicskext) with exit code 0
+WAIT 0.004
+PRINT Kernel: restarted (/private/var/db/comhn4ckexts) without debug symbols
+WAIT 0.003
+PRINT HN4CNetwork: mounting volume (/System/Extensions/Graphicskext) due to timeout
+WAIT 0.006
+PRINT HN4CNetwork: restarted (/private/var/db/comhn4ckexts) with warning code 0x2F1A
+WAIT 0.014
+PRINT PowerMgmt: disabled (/usr/libexec) after 129s
+WAIT 0.012
+PRINT HCFS: loaded successfully (/dev/disk1s1) because of missing dependency
+WAIT 0.008
+PRINT PMAP: restarted (/etc/hcfsconf) due to timeout
+WAIT 0.005
+PRINT HN4CGraphics: failed to start (/System/Library/Core) without debug symbols
+WAIT 0.006
+PRINT HN4CGraphics: mounting volume (/etc/hcfsconf) after 129s
+WAIT 0.011
+PRINT HN4C: enabled (/System/Extensions/Graphicskext) because of missing dependency
+WAIT 0.002
+PRINT HN4C: mounting volume (/usr/libexec) with warning code 0x2F1A
+WAIT 0.01
+PRINT HN4C: verifying cache (/etc/hcfsconf) after 129s
+WAIT 0.002
+PRINT
+PRINT
+PRINT
+PRINT Booting Complete!
+WAIT 3
+END_BOOT
