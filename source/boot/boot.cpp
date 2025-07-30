@@ -9,6 +9,8 @@
 #else
 #include <unistd.h>
 #endif
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 #ifndef _WIN32
@@ -16,6 +18,7 @@ inline void Sleep(const int& ms) {usleep(ms * 1000);}
 #endif
 
 void Boot() {
+    srand((unsigned int)time(nullptr));
     HNASM("ui.chns", "LOGO");
     HNASM("ui.chns", "NULL");
     string block = "=";

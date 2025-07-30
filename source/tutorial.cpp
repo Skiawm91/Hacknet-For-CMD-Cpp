@@ -9,20 +9,20 @@ using namespace std;
 
 void Tutorial() {
     extern string input;
-    int chse;
+    int chse = 0;
     string cmd;
     HNASM("tutorial/failsafe.chns", "FAILSAFE");
     HNASM("tutorial/tutorial.chns", "CHANGESONG");
     HNASM("tutorial/tutorial.chns", "TUTORIAL1");
     while(true) {
         HNASM("tutorial/tutorial.chns", "TR1CHSE");
-        try {chse = stoi(input);} catch (const invalid_argument&) {chse = 0;}
-        if (chse = 1) {
+        try {chse = stoi(input);} catch (const invalid_argument& e) {chse = 0;}
+        if (chse == 1) {
             HNASM("tutorial/tutorial.chns", "TUTORIAL2");
             while(true) {
                 HNASM("tutorial/tutorial.chns", "TR2CHSE");
-                try {chse = stoi(input);} catch (const invalid_argument&) {chse = 0;}
-                if (chse = 1) {
+                try {chse = stoi(input);} catch (const invalid_argument& e) {chse = 0;}
+                if (chse == 1) {
                     HNASM("tutorial/story.chns", "INITIAL");
                     HNASM("tutorial/story.chns", "MYSVR");
                     while(true) {
@@ -141,7 +141,7 @@ void Tutorial() {
                         }
                     }
                     return;
-                } else if (chse = 2) {
+                } else if (chse == 2) {
                     Cmd();
                     break;
                 }

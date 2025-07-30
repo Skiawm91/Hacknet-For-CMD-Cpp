@@ -40,6 +40,7 @@ int main(){
     while(true) {
         HNASM("ui.chns", "LOGO");
         HNASM("ui.chns", "HOME");
+        cout << "Version: " << "0.2.0" << ", " << "Beta 3" << endl;
         try {chse = stoi(input);} catch (const invalid_argument) {chse = 0;}
         switch(chse) {
             case 1:

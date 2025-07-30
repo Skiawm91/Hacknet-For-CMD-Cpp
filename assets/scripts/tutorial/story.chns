@@ -76,7 +76,6 @@ GETINPUT [Jhon's Server] ~$
 END_GETINFOCMD
 
 BEGIN_GETHACKED
-PLAYAUDIO tutorial2.wav
 PRINT
 PRINT ◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥
 PRINT   |_ _| \| |/ __/ _ \|  \/  |_ _| \| |/ __|  / __/ _ \| \| | \| | __/ __|_   _|_ _/ _ \| \| |

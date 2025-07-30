@@ -8,6 +8,8 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 #ifndef _WIN32
@@ -41,6 +43,7 @@ void PRINTWFW(const string& content) {
             text.push_back(word);
         }
     }
+    srand((unsigned int)time(nullptr));
     for (const string& t : text) {
         cout << t;
         Sleep(rand() % 21 + 30);

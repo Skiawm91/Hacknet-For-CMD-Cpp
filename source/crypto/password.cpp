@@ -6,7 +6,7 @@
 #else
 #include <termios.h>
 #include <unistd.h>
-char getch() {
+char _getch() {
     termios oldt, newt;
     tcgetattr(STDIN_FILENO, &oldt);
     newt = oldt;
@@ -26,11 +26,7 @@ void HidePwd(const string& rawtext) {
     cout << rawtext;
     while (true) {
         char ch =
-            #ifdef _WIN32
-            _getch();
-            #else
-            getch();
-            #endif
+        _getch();
         if (ch == '\n' || ch == '\r') {
             cout << endl;
             break;

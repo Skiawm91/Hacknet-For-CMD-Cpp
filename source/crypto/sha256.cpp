@@ -1,41 +1,40 @@
-#define _HAS_STD_BYTE 0
 #include "crypto.h"
 #ifdef _WIN32
-#include <windows.h>
-#include <wincrypt.h>
+#include <winrt/base.h>
+#include <winrt/Windows.Security.Cryptography.h>
+#include <winrt/Windows.Security.Cryptography.Core.h>
+#include <winrt/Windows.Storage.Streams.h>
 #elif __APPLE__
 #include <CommonCrypto/CommonDigest.h>
 #endif
 #include <string>
 #include <sstream>
 #include <iomanip>
+using namespace winrt;
+using namespace Windows::Security::Cryptography;
+using namespace Windows::Security::Cryptography::Core;
+using namespace Windows::Storage::Streams;
 using namespace std;
 
 string shatext;
 
 #ifdef _WIN32
 void SHA256Encrypt(const string& rawtext) {
-    HCRYPTPROV hProv = 0;
-    HCRYPTHASH hHash = 0;
-    BYTE hash[32];
-    DWORD hashLen = 32;
-    if(!CryptAcquireContext(&hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
+    static bool apartmentInitialized = false;
+    if (!apartmentInitialized) {
+        init_apartment();
+        apartmentInitialized = true;
     }
-    if(!CryptCreateHash(hProv, CALG_SHA_256, 0, 0, &hHash)) {
-        CryptReleaseContext(hProv, 0);
+    auto data = CryptographicBuffer::ConvertStringToBinary(to_hstring(rawtext), BinaryStringEncoding::Utf8);
+    HashAlgorithmProvider hashProvider = HashAlgorithmProvider::OpenAlgorithm(HashAlgorithmNames::Sha256());
+    IBuffer hashBuffer = hashProvider.HashData(data);
+    com_array<uint8_t> hashData;
+    CryptographicBuffer::CopyToByteArray(hashBuffer, hashData);
+    stringstream ss;
+    for (uint8_t b : hashData) {
+        ss << hex << setw(2) << setfill('0') << (int)b;
     }
-    if(!CryptHashData(hHash, (BYTE*)rawtext.c_str(), rawtext.size(), 0)) {
-        CryptDestroyHash(hHash);
-        CryptReleaseContext(hProv, 0);
-    }
-    if(CryptGetHashParam(hHash, HP_HASHVAL, hash, &hashLen, 0)) {
-        stringstream ss;
-        for(DWORD i = 0; i < hashLen; i++)
-            ss << hex << setw(2) << setfill('0') << (int)hash[i];
-        shatext = ss.str();
-    }
-    CryptDestroyHash(hHash);
-    CryptReleaseContext(hProv, 0);
+    shatext = ss.str();
 }
 #elif __APPLE__
 void SHA256Encrypt(const string& rawtext) {

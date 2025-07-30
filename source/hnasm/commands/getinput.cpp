@@ -11,19 +11,20 @@ using namespace std;
 
 string input;
 
+#ifdef _WIN32
 void OTTF2K() {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO csbi;
-    DWORD charsWritten;
+    DWORD written;
     if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) return;
-    SHORT targetY = csbi.dwCursorPosition.Y - 1;
-    if (targetY < 0) return;
-    COORD startPos = {0, targetY};
+    SHORT targetY = csbi.dwCursorPosition.Y > 0 ? csbi.dwCursorPosition.Y - 1 : 0;
+    COORD coord = {0, targetY};
     DWORD width = csbi.dwSize.X;
-    FillConsoleOutputCharacter(hConsole, ' ', width, startPos, &charsWritten);
-    FillConsoleOutputAttribute(hConsole, csbi.wAttributes, width, startPos, &charsWritten);
-    SetConsoleCursorPosition(hConsole, startPos);
+    FillConsoleOutputCharacter(hConsole, ' ', width, coord, &written);
+    FillConsoleOutputAttribute(hConsole, csbi.wAttributes, width, coord, &written);
+    SetConsoleCursorPosition(hConsole, coord);
 }
+#endif
 
 void GETINPUT(const string& content) {
     cout << content;
@@ -33,9 +34,9 @@ void GETINPUT(const string& content) {
 void GETINPUTR(const string& content) {
     #ifdef _WIN32
     OTTF2K();
-    # else
-    cout << "\033[F";
-    cout << "\033[2K";
+    cout << "\r                                        \r" << content;
+    #else
+    cout << "\033[F\033[2K";
     #endif
     cout << content;
     getline(cin, input);
