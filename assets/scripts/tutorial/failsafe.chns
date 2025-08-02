@@ -7,13 +7,13 @@ PRINTWFW - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 WAIT 1
 PRINTWFW 嗨 ，
 WAIT 1
-PRINTWFW . . .
+PRINT ...
 WAIT 1
-PRINTWFW 這 件 事 不 對 勁 . . . ␣ 比 我 想 像 中 的 還 要 複 雜 . . .
+PRINTWFW 這 件 事 不 對 勁 . . . ， 比 我 想 像 中 的 還 要 複 雜 . . .。
 WAIT 1
 PRINTWFW 我 本 來 想 說 我 應 該 用 過 去 式 來 寫 這 段 話 ， 不 過 恐 怕 . . . . . . 這 件 事 還 沒 有 結 束 。
 WAIT 1
-PRINTWFW 我 的 名 字 叫 ␣ G i g a B y t e ␣ 當 你 看 到 這 則 訊 息 時 ␣ 代 表 我 已 經 死 了 . . .
+PRINTWFW 我 的 名 字 叫 ␣ G i g a B y t e ␣ 當 你 看 到 這 則 訊 息 時 ， 我 已 經 死 了 . . . . . . 。
 WAIT 3
 PRINT
 PRINT ...

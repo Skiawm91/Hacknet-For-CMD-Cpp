@@ -31,6 +31,7 @@ void HNASM(const string& fileName, const string& partName) {
             else if (command=="GETINPUTR") {GETINPUTR(content);}
             else if (command=="GETINPUTPWD") {GETINPUTPWD(content);}
             else if (command=="GETINPUTPWDR") {GETINPUTPWDR(content);}
+            else if (command=="GOTO") {GOTO(fileName, content);}
         }
     }
 }

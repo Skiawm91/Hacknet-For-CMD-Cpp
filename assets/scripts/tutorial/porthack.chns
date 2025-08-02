@@ -1,100 +1,101 @@
 BEGIN_RUN
 PRINT {PortHack} running...
 END_RUN
+
 BEGIN_HACK
-WAIT 0.2
+WAIT 0.1
 PRINT porsche firebird	prince	rosebud
-WAIT 0.2
+WAIT 0.1
 PRINT password	guitar	butter	beach	jaguar
-WAIT 0.2
+WAIT 0.1
 PRINT 12345678	chelsea	united	starcraft	great
-WAIT 0.2
+WAIT 0.1
 PRINT 1234	black	turtle	7777777	cool
-WAIT 0.2
+WAIT 0.1
 PRINT pussycat	diamond	steelers	muffin	cooper
-WAIT 0.2
+WAIT 0.1
 PRINT 12345	nascar	tiffany	redsox	1313
-WAIT 0.2
+WAIT 0.1
 PRINT dragon	jackson	zxcvbn	star	scorpio
-WAIT 0.2
+WAIT 0.1
 PRINT qwerty	cameron	tomcat	testing	mountain
-WAIT 0.2
+WAIT 0.1
 PRINT 696969	654321	golf	shannon	madison
-WAIT 0.2
+WAIT 0.1
 PRINT mustang	computer	bond007	murphy	987654
-WAIT 0.2
+WAIT 0.1
 PRINT letmein	amanda	bear	frank	brazil
-WAIT 0.2
+WAIT 0.1
 PRINT baseball	wizard	tiger	hannah	lauren
-WAIT 0.2
+WAIT 0.1
 PRINT master	Iwasphone	doctor	dave	japan
-WAIT 0.2
+WAIT 0.1
 PRINT michael	money	gateway	eagle1	knickers
-WAIT 0.2
+WAIT 0.1
 PRINT football	phoenix	gators	11111	squirtle
-WAIT 0.2
+WAIT 0.1
 PRINT shadow	mickey	angel	mother	stars
-WAIT 0.2
+WAIT 0.1
 PRINT monkey	bailey	junior	nathan	apple
-WAIT 0.2
+WAIT 0.1
 PRINT abc123	knight	thx1138	raiders	alexis
-WAIT 0.2
+WAIT 0.1
 PRINT pass	iceman	porno	steve	aaaa
-WAIT 0.2
+WAIT 0.1
 PRINT bucket	tigers	badboy	forever	bonnie
-WAIT 0.2
+WAIT 0.1
 PRINT 6969	purple	debbie	angela	peaches
-WAIT 0.2
+WAIT 0.1
 PRINT jordan	andrea	spider	viper	jasmine
-WAIT 0.2
+WAIT 0.1
 PRINT harley	alicorn	melissa	ou812	kevin
-WAIT 0.2
+WAIT 0.1
 PRINT ranger	dakota	booger	jake	matt
-WAIT 0.2
+WAIT 0.1
 PRINT iwantu	aaaaaa	1212	lovers	qwertyui
-WAIT 0.2
+WAIT 0.1
 PRINT jennifer	player	flyers	suckit	danielle
-WAIT 0.2
+WAIT 0.1
 PRINT hunter	sunshine	fish	gregory	baman
-WAIT 0.2
+WAIT 0.1
 PRINT ponies	morgan	ilovecorm	buddy	4321
-WAIT 0.2
+WAIT 0.1
 PRINT 2000	starwars	matrix	whatever	4128
-WAIT 0.2
+WAIT 0.1
 PRINT test	boomer	piderman	young	runner
-WAIT 0.2
+WAIT 0.1
 PRINT batman	cowboys	scooby	nicholas	swimming
-WAIT 0.2
+WAIT 0.1
 PRINT trustno1	edward	jason	lucky	dolphin
-WAIT 0.2
+WAIT 0.1
 PRINT thomas	charles	walter	helpme	gordon
-WAIT 0.2
+WAIT 0.1
 PRINT tigger	girls	bimp	jackie	casper
-WAIT 0.2
+WAIT 0.1
 PRINT robert	booboo	boston	monica	stupid
-WAIT 0.2
+WAIT 0.1
 PRINT access	coffee	braves	midnight	iloveboats
-WAIT 0.2
+WAIT 0.1
 PRINT love	xxxxxx	yankee	college	saturn
-WAIT 0.2
+WAIT 0.1
 PRINT buster	bulldog	lover	boby	gemini
-WAIT 0.2
+WAIT 0.1
 PRINT 1234567	ncc1701	barney	bort	apples
-WAIT 0.2
+WAIT 0.1
 PRINT soccer	rabbit	victor	brian	august
-WAIT 0.2
+WAIT 0.1
 PRINT hockey	peanut	tucker	mark	3333
-WAIT 0.2
+WAIT 0.1
 PRINT killer	john	princess	startrek	canada
-WAIT 0.2
+WAIT 0.1
 PRINT george	johnny	mercedes	sierra	blazer
-WAIT 0.2
+WAIT 0.1
 PRINT sexy	gandalf	5150	leather	earlgamer
-WAIT 0.2
+WAIT 0.1
 PRINT andrew	boop	doggie	232323	hunting
-WAIT 0.2
+WAIT 0.1
 PRINT charlie	winter	zzzzzz	4444	kitty
-WAIT 0.2
+WAIT 0.1
 PRINT superman	brandy	gunner	beavis	rainbow
 PRINT
 PRINT
@@ -102,6 +103,7 @@ PRINT
 PRINT Password Found!
 WAIT 3
 END_HACK
+
 BEGIN_DONE
 PRINT {PortHack} done!
 END_DONE

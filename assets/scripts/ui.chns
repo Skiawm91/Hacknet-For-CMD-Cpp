@@ -4,7 +4,6 @@ PRINT
 PRINT
 PRINT
 PRINT
-PRINT
 PRINT                ██╗  ██╗  █████╗   █████╗  ██╗  ██╗ ███╗  ██╗ ███████╗ ████████╗
 PRINT                ██║  ██║ ██╔══██╗ ██╔══██╗ ██║ ██╔╝ ████╗ ██║ ██╔════╝ ╚══██╔══╝
 PRINT                ███████║ ███████║ ██║  ╚═╝ █████═╝  ██╔██╗██║ █████╗      ██║   
@@ -32,7 +31,7 @@ PRINT
 PRINT
 PRINT
 PRINT
-PRINT
+PRINT                                                                                                  Version: 0.2.0 [Beta 3]
 GETINPUT > 
 END_HOME
 

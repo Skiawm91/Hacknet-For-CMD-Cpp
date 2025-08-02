@@ -1,15 +1,15 @@
 BEGIN_INITIAL
 CLEAR
-PRINT 正在與D3f4ult's PC建立安全連線...
+PRINTWFW 正 在 與 D 3 f 4 u l t 建 立 安 全 連 線 . . .
 WAIT 2
-PRINT 已連接
+PRINTWFW 已 連 接
 WAIT 2
-PRINT [D3f4ult] 你好 我是Bit的助手 現在請跟者我一步一步操作 操作完你就學會了...三分之一
+PRINTWFW [D3f4ult] ␣ 你好 ␣ 我 是 G i g a B y t e 的 助 手 ␣ 現 在 請 跟 者 我 一 步 一 步 操 作 ␣ 操 作 完 你 就 學 會 了 . . . 三 分 之 一
 END_INITIAL
 
 BEGIN_MYSVR
 WAIT 1
-PRINT [D3f4ult] 首先 在下面輸入mysvr
+PRINTWFW [D3f4ult] ␣ 首 先 ␣ 在 下 面 輸 入 m y s v r
 END_MYSVR
 
 BEGIN_MYSVRCMD
@@ -19,7 +19,7 @@ END_MYSVRCMD
 BEGIN_CMDINV
 PRINT 指令錯誤!
 PRINT
-PRINT [D3f4ult] 如果遇到這種情況 你需要再輸入一次指令 或者輸入help尋求幫助
+PRINTWFW [D3f4ult] ␣ 如 果 遇 到 這 種 情 況 ␣ 你 需 要 再 輸 入 一 次 指 令 ␣ 或 者 輸 入 h e l p 尋 求 幫 助 
 END_CMDINV
 
 BEGIN_CNTMYSVR
@@ -30,22 +30,22 @@ END_CNTMYSVR
 
 BEGIN_EXPLIFERR
 PRINT
-PRINT [D3f4ult] 看到這個代表連線成功
+PRINTWFW [D3f4ult] ␣ 看 到 這 個 代 表 連 線 成 功
 WAIT 2
-PRINT [D3f4ult] 如果看到這個代表連線失敗
+PRINTWFW [D3f4ult] ␣ 如 果 看 到 這 個 代 表 連 線 失 敗
 PRINT
 PRINT 正在連接到我的伺服器...
 PRINT 已失去連線!
 PRINT
 WAIT 2
-PRINT [D3f4ult] 需要重新連線一次
+PRINTWFW [D3f4ult] ␣ 需 要 重 新 連 線 一 次
 WAIT 3
-PRINT [D3f4ult] 但是大部分的情況都是連線成功
+PRINTWFW [D3f4ult] ␣ 但 是 大 部 分 的 情 況 都 是 連 線 成 功
 END_EXPLIFERR
 
 BEGIN_SCAN1
 WAIT 2
-PRINT [D3f4ult] 接下來輸入scan
+PRINTWFW [D3f4ult] ␣ 接 下 來 輸 入 s c a n
 END_SCAN1
 
 BEGIN_SCAN1CMD
@@ -53,7 +53,7 @@ GETINPUT [myserver] ~$
 END_SCAN1CMD
 
 BEGIN_CNT1
-PRINT [D3f4ult] 接著輸入cnt 1 cnt就是連線 1就是電腦的編號
+PRINTWFW [D3f4ult] ␣ 接 著 輸 入 c n t ␣ 1 ␣ c n t 就 是 連 線 ␣ 1 就 是 電 腦 的 編 號
 END_CNT1
 
 BEGIN_CNT1CMD
@@ -68,7 +68,7 @@ END_CNTJOHNSVR
 
 BEGIN_GETINFO
 PRINT
-PRINT [D3f4ult] 接者輸入info
+PRINTWFW [D3f4ult] ␣ 接 者 輸 入 i n f o
 END_GETINFO
 
 BEGIN_GETINFOCMD
@@ -83,22 +83,23 @@ PRINT    | || .` | (_| (_) | |\/| || || .` | (_ | | (_| (_) | .` | .` | _| (__  
 PRINT   |___|_|\_|\___\___/|_|  |_|___|_|\_|\___|  \___\___/|_|\_|_|\_|___\___| |_| |___\___/|_|\_|
 PRINT ◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥
 PRINT
-PRINT [D3f4ult] 好吧...看來這個伺服器的基本資料不讓我們看 我們只好強制fu,4fm3y xul4x了...
+PRINTWFW [D3f4ult] ␣ 好 吧 . . . 看 來 這 個 伺 服 器 的 基 本 資 料 不 讓 我 們 看 ␣ 我 們 只 好 強 制 fu,4 fm3 y xul4 x . . .
 WAIT 3
-PRINT [D3f4ult] what??? yp3ak7回事??? 我的文y4怎麼1u04t/6亂碼了???
+PRINTWFW [D3f4ult] ␣ w h a t ? ? ? ␣ yp3 ak7 回 事 ? ? ? ␣ 我 的 文 y4 怎 麼 1u04 t/6 亂 碼 了 ? ? ?
 WAIT 2
-PRINT [hacker]: 哈哈哈!!! 你的電腦已經被我掌控了!!!
+PRINTWFW [hacker] ␣ 哈 哈 哈 ! ! ! ␣ 你 的 電 腦 已 經 被 我 掌 控 了 ! ! !
 WAIT 2
-PRINT [D3f4ult] 怎麼...huiogrbeijpa 回事...
+PRINTWFW [D3f4ult] ␣ 怎 麼 . . . h u i o g r b e i j p a ␣ 回 事 . . .
 WAIT 3
-PRINT [hacker]: 跟你自我介紹一下 我叫大明 我是熱愛電腦的玩家 也喜歡玩電腦 而現在的情況就是我搞的 哈哈哈哈!!!
+PRINTWFW [hacker] ␣ 跟 你 自 我 介 紹 一 下 ␣ 我 叫 大 明 ␣ 我 是 熱 愛 電 腦 的 玩 家 ␣ 也 喜 歡 玩 電 腦 ␣ 而 現 在 的 情 況 就 是 我 搞 的 ␣ 哈 哈 哈 哈 ! ! !
 WAIT 2
-PRINT [D3f4ult] 你為gp6ak7...要這u;4做???
+PRINTWFW [D3f4ult] ␣ 你 為 gp6 ak7 . . . 要 這 u;4 做 ? ? ?
 WAIT 2
-PRINT [hacker]: 因為我想考驗你的隨機應變能力啊awa
+PRINTWFW [hacker] ␣ 因 為 我 想 考 驗 你 的 隨 機 應 變 能 力 啊 a w a
 WAIT 3
-PRINT [D3f4ult] 既然5k4u;4...那就ao6辦法了... 快! 用別的方法解決這次的危機!
-PRINT (回到你的電腦 檢查log 看看他的連線蹤跡)
+PRINTWFW [D3f4ult] ␣ 既 然 5k4 u;4 . . . 那 就 ao6 104 法 了 . . . ␣ 快 ! ␣ 用 1i,6 的 方 法 解 rm,6 這 次 2k7 jo6 機 !
+PRINTWFW [提示] ␣ 回 到 你 的 電 腦 ␣ 檢 查 l o g ␣ 查 看 他 的 連 線 蹤 跡
+PRINT
 END_GETHACKED
 
 BEGIN_GETHACKEDCMD
@@ -110,7 +111,7 @@ GETINPUT [mysvr] ~$
 END_BACKMYSVRCMD
 
 BEGIN_SCAN2
-PRINT [D3f4ult] 好了! 接著scan 查查看現在hacker的編號是多少!
+PRINTWFW [D3f4ult] ␣ cl3 xk7 ! ␣ 接 5k8 gj 入 s c a n ␣ 查 看 vu04 在 h a c k e r 的 1u0 號 是 2ji 少 !
 END_SCAN2
 
 BEGIN_SCAN2CMD
@@ -118,7 +119,7 @@ GETINPUT [myserver] ~$
 END_SCAN2CMD
 
 BEGIN_CNT3
-PRINT [D3f4ult] 接者cnt 3
+PRINTWFW [D3f4ult] ␣ ru, 者 c n t ␣ 3
 END_CNT3
 
 BEGIN_CNT3CMD
@@ -132,7 +133,7 @@ WAIT 1
 END_CNTHACKER
 
 BEGIN_PRTHACK
-PRINT [D3f4ult] 好! 現在輸入porthack駭入他的電腦!
+PRINTWFW [D3f4ult] ␣ cl3 ! ␣ vu04 在 gj 入 p o r t h a c k 來 c94 入 他 的 2u04 sl3 !
 END_PRTHACK
 
 BEGIN_PRTHACKCMD
@@ -140,14 +141,14 @@ GETINPUT [huirohbuhrupieahiui] ~$
 END_PRTHACKCMD
 
 BEGIN_PRTHACK2
-WAIT 2
-PRINT [D3f4ult] 快啊...已經dj94來不及了!
+WAIT 5
+PRINTWFW [D3f4ult] ␣ dj94 啊 . . . u3 經 dj94 來 1j4 ru6 了 !
 WAIT 5
 END_PRTHACK2
 
 BEGIN_RM
 WAIT 1
-PRINT [D3f4ult] 很好! 現在輸入rm *刪除電腦gl4的所有資料 (不是你的電腦)
+PRINTWFW [D3f4ult] ␣ cp3 cl3 ! ␣ 現 在 輸 入 r m ␣ * 來 g0 tj6 電 腦 gl4 的 nji3 u.3 y xul4 !
 END_RM
 
 BEGIN_RMCMD
@@ -155,11 +156,11 @@ GETINPUT [huirohbuhrupieahiui] ~$
 END_RMCMD
 
 BEGIN_ENDING
-PRINT [D3f4ult] 非常好 終於完成了!
+PRINTWFW [D3f4ult] ␣ 非 常 好 ␣ 終 於 完 成 了 !
 WAIT 2
-PRINT [hacker]: 可惡...你的njo6ru 應變能力怎麼dk3u3這麼強???
+PRINTWFW [hacker] ␣ dk3 j4 . . . su3 的 njo 6ru 應 1u04 s/6 xu4 怎 麼 dk3 u3 這 ak7 強 ? ? ?
 WAIT 2
-PRINT [D3f4ult] 哈哈哈 現在你變成亂碼了!
+PRINTWFW [D3f4ult] ␣ 哈 哈 哈 ! ␣ 現 在 你 變 成 亂 碼 了 !
 WAIT 2
 PRINT
 PRINT ◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥
@@ -168,47 +169,48 @@ PRINT    | || .` | (_| (_) | |\/| || || .` | (_ | | (_| (_) | .` | .` | _| (__  
 PRINT   |___|_|\_|\___\___/|_|  |_|___|_|\_|\___|  \___\___/|_|\_|_|\_|___\___| |_| |___\___/|_|\_|
 PRINT ◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥
 PRINT
-PRINT [未知的連線]: 全部都給我閉嘴
+PRINTWFW [未知的連線] ␣ 全 部 都 給 我 閉 嘴
 WAIT 2
-PRINT [D3f4ult] 你是誰???
+PRINTWFW [D3f4ult] ␣ 你 是 誰 ? ? ?
 WAIT 2
-PRINT [未知的連線]: 我是這個遊戲的創造者:阿強
+PRINTWFW [未知的連線] ␣ 我 是 這 個 遊 戲 的 創 造 者 : ␣ 阿 強
 WAIT 2
-PRINT [D3f4ult] 不是啊 你混進來幹嘛???
+PRINTWFW [D3f4ult] ␣ 不 是 啊 ␣ 你 混 進 來 幹 嘛 ? ? ?
 WAIT 2
-PRINT [未知的連線]: 我要告訴你們兩個 我在你們的電腦裡放了兩個forkbomb
+PRINTWFW [阿強] ␣ 我 要 告 訴 你 們 兩 個 ␣ 我 在 你 們 的 電 腦 裡 放 了 兩 個 f o r k b o m b
 WAIT 2
-PRINT [D3f4ult] what?????
+PRINTWFW [D3f4ult] ␣ W h a t ? ? ? ? ?
 WAIT 2
-PRINT [hacker]: what??????????????
+PRINTWFW [hacker] ␣ W h a t ? ? ? ? ? ? ? ? ? ? ? ? ? ?
 WAIT 2
-PRINT [未知的連線]: 過了5秒後 這個forkbomb就會爆炸 你電腦上的所有資料都會不見
+PRINTWFW [阿強] ␣ 過 了 5 秒 後 ␣ 這 個 f o r k b o m b 就 會 爆 炸 ␣ 電 腦 上 的 所 有 資 料 都 會 不 見
 WAIT 2
-PRINT [D3f4ult] 你為什麼要這樣做???
+PRINTWFW [D3f4ult] ␣ 你 為 什 麼 要 這 樣 做 ? ? ?
 WAIT 2
-PRINT [未知的連線]: 因為我想不到劇情的結尾了 ._.
+PRINTWFW [阿強] ␣ 因 為 我 想 不 到 劇 情 的 結 尾 了 ._.
 WAIT 2
-PRINT [D3f4ult] 唉呦我*!!!!!!!!!!
+PRINTWFW [D3f4ult] ␣ 唉 呦 我 * ! ! ! ! ! ! ! ! ! !
 WAIT 1
-PRINT [hacker]: what the f***
+PRINTWFW [hacker] ␣ W h a t ␣ t h e ␣ f * * *
 WAIT 1
-PRINT (程序已被強制停止)
+PRINTWFW ( 程 序 已 被 強 制 停 止 )
 WAIT 1
-PRINT [hacker]: (已中斷連線)
+PRINTWFW ( h a c k e r ␣ 已 中 斷 連 線 )
 WAIT 1
-PRINT [未知的連線]: 就這樣! 上傳!
+PRINTWFW [阿強] ␣ 就 這 樣 ! ␣ 上 傳 !
 WAIT 2
 END_ENDING
 
 BEGIN_END
 CLEAR
 PLAYAUDIO DreamHead.wav
-END_CHANGESONG
-PRINT Demo (兼具教學) 就到這裡結束了 後面我會繼續發更新
-PRINT 感謝各位遊玩試玩版!
+PRINTWFW 教 學 就 到 這 裡 結 束 了 !
+PRINTWFW 感 謝 各 位 遊 玩 試 玩 版 !
 PRINT
+PRINT 1) 回到主選單
+PRINT 2) 離開
 END_END
 
 BEGIN_ENDCHOOSE
-GETINPUT 回到主選單(home) 離開(exit): 
+GETINPUTR > 
 END_ENDCHOOSE

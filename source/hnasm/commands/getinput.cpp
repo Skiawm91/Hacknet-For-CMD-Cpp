@@ -15,14 +15,14 @@ string input;
 void OTTF2K() {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO csbi;
-    DWORD written;
-    if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) return;
-    SHORT targetY = csbi.dwCursorPosition.Y > 0 ? csbi.dwCursorPosition.Y - 1 : 0;
-    COORD coord = {0, targetY};
-    DWORD width = csbi.dwSize.X;
-    FillConsoleOutputCharacter(hConsole, ' ', width, coord, &written);
-    FillConsoleOutputAttribute(hConsole, csbi.wAttributes, width, coord, &written);
-    SetConsoleCursorPosition(hConsole, coord);
+    GetConsoleScreenBufferInfo(hConsole, &csbi);
+    if (csbi.dwCursorPosition.Y > 0) {
+        COORD pos = { 0, csbi.dwCursorPosition.Y - 1 };
+        DWORD written;
+        FillConsoleOutputCharacter(hConsole, ' ', csbi.dwSize.X, pos, &written);
+        FillConsoleOutputAttribute(hConsole, csbi.wAttributes, csbi.dwSize.X, pos, &written);
+        SetConsoleCursorPosition(hConsole, pos);
+    }
 }
 #endif
 
@@ -34,7 +34,6 @@ void GETINPUT(const string& content) {
 void GETINPUTR(const string& content) {
     #ifdef _WIN32
     OTTF2K();
-    cout << "\r                                        \r" << content;
     #else
     cout << "\033[F\033[2K";
     #endif
