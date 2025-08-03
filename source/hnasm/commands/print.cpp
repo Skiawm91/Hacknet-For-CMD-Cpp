@@ -1,5 +1,6 @@
 #define _HAS_STD_BYTE 0
 #include "cmds.h"
+#include "../../misc/manageInput.h"
 #ifdef _WIN32
 #include <windows.h>
 #else
@@ -44,9 +45,12 @@ void PRINTWFW(const string& content) {
         }
     }
     srand((unsigned int)time(nullptr));
+    KeyBlocker key;
+    key.disable(13);
     for (const string& t : text) {
-        cout << t;
+        cout << t << flush;
         Sleep(rand() % 21 + 30);
     }
+    key.enable();
     cout << endl;
 }

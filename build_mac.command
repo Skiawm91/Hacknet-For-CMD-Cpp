@@ -8,4 +8,4 @@ clang++ $(find source -name '*.cpp') -framework AudioToolbox -framework CoreFoun
 echo "Done."
 read -p "Press Enter to Run Application."
 cd build
-./Hacknet
+./Hacknet4CMD

@@ -111,8 +111,7 @@ void Tutorial() {
                         cmd = input;
                         if (cmd=="porthack") {
                             HNASM("tutorial/porthack.chns", "RUN");
-                            thread prthack(HNASM, "tutorial/porthack.chns", "HACK");
-                            prthack.join();
+                            thread(HNASM, "tutorial/porthack.chns", "HACK").detach();
                             HNASM("tutorial/story.chns", "PRTHACK2");
                             HNASM("tutorial/porthack.chns", "DONE");
                             break;

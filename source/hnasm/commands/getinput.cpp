@@ -1,6 +1,7 @@
 #define _HAS_STD_BYTE 0
 #include "cmds.h"
 #include "../../crypto/crypto.h"
+#include "../../misc/manageInput.h"
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -37,7 +38,7 @@ void GETINPUTR(const string& content) {
     #else
     cout << "\033[F\033[2K";
     #endif
-    cout << content;
+    cout << "\r" << content << flush;
     getline(cin, input);
 }
 

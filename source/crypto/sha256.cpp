@@ -4,16 +4,16 @@
 #include <winrt/Windows.Security.Cryptography.h>
 #include <winrt/Windows.Security.Cryptography.Core.h>
 #include <winrt/Windows.Storage.Streams.h>
+using namespace winrt;
+using namespace Windows::Security::Cryptography;
+using namespace Windows::Security::Cryptography::Core;
+using namespace Windows::Storage::Streams;
 #elif __APPLE__
 #include <CommonCrypto/CommonDigest.h>
 #endif
 #include <string>
 #include <sstream>
 #include <iomanip>
-using namespace winrt;
-using namespace Windows::Security::Cryptography;
-using namespace Windows::Security::Cryptography::Core;
-using namespace Windows::Storage::Streams;
 using namespace std;
 
 string shatext;
