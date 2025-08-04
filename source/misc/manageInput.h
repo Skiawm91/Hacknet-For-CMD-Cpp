@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <atomic>
+#include <string>
 using namespace std;
 #ifndef KEYBLOCKER_H
 #define KEYBLOCKER_H
@@ -16,4 +17,5 @@ private:
     void inputLoop();
 };
 #endif
-void HidePwd(const string& rawtext);
+void HidePwd(const string& prompt);
+void Input(const string& prompt);

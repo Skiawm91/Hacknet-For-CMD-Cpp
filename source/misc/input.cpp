@@ -19,25 +19,25 @@ inline char _getch() {
 #endif
 using namespace std;
 
-string pwdtext;
+string text;
 
-void HidePwd(const string& prompt) {
-    pwdtext.clear();
+void Input(const string& prompt) {
+    text.clear();
     cout << prompt;
     while (true) {
-        char ch =
-        _getch();
+        char ch = _getch();
         if (ch == '\n' || ch == '\r') {
             cout << endl;
             break;
-        } else if (ch == 127 || ch == 8) {
-            if (!pwdtext.empty()) {
-                pwdtext.pop_back();
+        }
+        if (ch == 127 || ch == 8) {
+            if (!text.empty()) {
+                text.pop_back();
                 cout << "\b \b";
             }
         } else if (isprint(ch)) {
-            pwdtext += ch;
-            cout << '*';
+            text += ch;
+            cout << ch;
         }
     }
 }

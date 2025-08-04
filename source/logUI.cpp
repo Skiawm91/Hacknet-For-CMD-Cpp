@@ -8,14 +8,28 @@
 #include <string>
 #ifdef _WIN32
 #include <windows.h>
+#include <conio.h>
 #endif
 #include <fstream>
 #include <filesystem>
 #include <sstream>
 #include <algorithm>
+#include <thread>
+#include <atomic>
 using namespace std;
 
 string name;
+atomic<bool> run(true);
+
+inline void ESC() {
+    run = true;
+    while (true) {
+        if (_getch() == 27) {
+            run = false;
+            break;
+        }
+    }
+}
 
 void LogUI() {
     extern string input;
@@ -29,7 +43,8 @@ void LogUI() {
         try {chse = stoi(input);} catch (const invalid_argument) {chse = 0;}
         switch(chse) {
             case 1:
-                while(true) {
+                thread(ESC).detach();
+                while(run) {
                     HNASM("logUI/login.chns", "NAME");
                     transform(input.begin(), input.end(), input.begin(), ::tolower);
                     name = input;

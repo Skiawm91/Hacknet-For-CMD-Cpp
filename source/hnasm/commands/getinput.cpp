@@ -28,8 +28,9 @@ void OTTF2K() {
 #endif
 
 void GETINPUT(const string& content) {
-    cout << content;
-    getline(cin, input);
+    extern string text;
+    Input(content);
+    input = text;
 }
 
 void GETINPUTR(const string& content) {
