@@ -20,12 +20,18 @@ inline char _getch() {
 using namespace std;
 
 string text;
+bool escDetected;
 
 void Input(const string& prompt) {
+    escDetected = false;
     text.clear();
     cout << prompt;
     while (true) {
         char ch = _getch();
+        if (ch == 27) {
+            escDetected = true;
+            break;
+        }
         if (ch == '\n' || ch == '\r') {
             cout << endl;
             break;

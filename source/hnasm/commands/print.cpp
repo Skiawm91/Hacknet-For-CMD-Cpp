@@ -17,7 +17,7 @@ using namespace std;
 inline void Sleep(const int& ms) {usleep(ms * 1000);}
 #endif
 
-void PRINT(const string& content) {
+void HNScriptASM::print(const string& content) {
     if (content.empty()) {
         cout << endl;
     } else {
@@ -25,7 +25,7 @@ void PRINT(const string& content) {
     }
 }
 
-void PRINTR(const string& content) {
+void HNScriptASM::printr(const string& content) {
     if (content.empty()) {
         cout << "\r";
     } else {
@@ -33,7 +33,7 @@ void PRINTR(const string& content) {
     }
 }
 
-void PRINTWFW(const string& content) {
+void HNScriptASM::printwfw(const string& content) {
     vector<string> text;
     istringstream iss(content);
     string word;
@@ -45,12 +45,9 @@ void PRINTWFW(const string& content) {
         }
     }
     srand((unsigned int)time(nullptr));
-    KeyBlocker key;
-    key.disable(13);
     for (const string& t : text) {
         cout << t << flush;
         Sleep(rand() % 21 + 30);
     }
-    key.enable();
     cout << endl;
 }

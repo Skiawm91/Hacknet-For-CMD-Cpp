@@ -1,6 +1,6 @@
 #include "cmds.h"
 
-void CLEAR() {
+void HNScriptASM::clear(){
     #ifdef _WIN32
     system("cls");
     #else

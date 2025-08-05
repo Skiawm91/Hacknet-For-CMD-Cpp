@@ -20,22 +20,29 @@ inline char _getch() {
 using namespace std;
 
 string pwdtext;
+extern bool escDetected;
 
 void HidePwd(const string& prompt) {
+    escDetected = false;
     pwdtext.clear();
     cout << prompt;
     while (true) {
-        char ch =
-        _getch();
+        char ch = _getch();
+        if (ch == 27) {
+            escDetected = true;
+            break;
+        }
         if (ch == '\n' || ch == '\r') {
             cout << endl;
             break;
-        } else if (ch == 127 || ch == 8) {
+        }
+        if (ch == 127 || ch == 8) {
             if (!pwdtext.empty()) {
                 pwdtext.pop_back();
                 cout << "\b \b";
             }
-        } else if (isprint(ch)) {
+        }
+        if (isprint(ch)) {
             pwdtext += ch;
             cout << '*';
         }

@@ -8,7 +8,7 @@
 #include <sstream>
 using namespace std;
 
-void PLAYAUDIO(const string& content) {
+void HNScriptASM::playaudio(const string& content) {
     string arg1;
     istringstream args(content);
     args >> arg1;

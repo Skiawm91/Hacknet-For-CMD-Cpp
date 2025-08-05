@@ -19,20 +19,10 @@
 using namespace std;
 
 string name;
-atomic<bool> run(true);
-
-inline void ESC() {
-    run = true;
-    while (true) {
-        if (_getch() == 27) {
-            run = false;
-            break;
-        }
-    }
-}
 
 void LogUI() {
     extern string input;
+    extern bool escDetected;
     extern string pwdtext;
     extern string shatext;
     int chse = 0;
@@ -40,12 +30,13 @@ void LogUI() {
     while(true) {
         HNASM("ui.chns", "LOGO");
         HNASM("ui.chns", "USER");
+        if (escDetected) {return;}
         try {chse = stoi(input);} catch (const invalid_argument) {chse = 0;}
         switch(chse) {
             case 1:
-                thread(ESC).detach();
-                while(run) {
+                while(true) {
                     HNASM("logUI/login.chns", "NAME");
+                    if (escDetected) {break;}
                     transform(input.begin(), input.end(), input.begin(), ::tolower);
                     name = input;
                     {
@@ -57,6 +48,7 @@ void LogUI() {
                             istringstream iss(line);
                             iss >> tgshapwd;
                             HNASM("logUI/login.chns", "PASSWD");
+                            if (escDetected) {break;}
                             SHA256Encrypt(pwdtext);
                             shapwd = shatext;
                             if (shapwd == tgshapwd) {
@@ -75,11 +67,14 @@ void LogUI() {
                     while (true) {
                         HNASM("logUI/register.chns", "REGISTER");
                         HNASM("logUI/register.chns", "NAME");
+                        if (escDetected) {break;}
                         transform(input.begin(), input.end(), input.begin(), ::tolower);
                         name = input;
                         HNASM("logUI/register.chns", "PASSWD");
+                        if (escDetected) {break;}
                         pwd[0] = pwdtext;
                         HNASM("logUI/register.chns", "CONFIRM");
+                        if (escDetected) {break;}
                         pwd[1] = pwdtext;
                         HNASM("logUI/register.chns", "DETAILS");
                         while(true) {

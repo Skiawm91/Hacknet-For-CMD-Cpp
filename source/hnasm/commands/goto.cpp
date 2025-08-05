@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-void GOTO(const string& targetFile, const string& content) {
+void HNScriptASM::gotob(const string& targetFile, const string& content) {
     istringstream iss(content);
     string partName;
     iss >> partName;

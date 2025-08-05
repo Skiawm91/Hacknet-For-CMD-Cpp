@@ -27,26 +27,27 @@ void OTTF2K() {
 }
 #endif
 
-void GETINPUT(const string& content) {
+void HNScriptASM::getinput(const string& content) {
     extern string text;
     Input(content);
     input = text;
 }
 
-void GETINPUTR(const string& content) {
+void HNScriptASM::getinputr(const string& content) {
+    extern string text;
     #ifdef _WIN32
     OTTF2K();
     #else
     cout << "\033[F\033[2K";
     #endif
-    cout << "\r" << content << flush;
-    getline(cin, input);
+    Input(content);
+    input = text;
 }
 
-void GETINPUTPWD(const string& content) {
+void HNScriptASM::getinputpwd(const string& content) {
     HidePwd(content);
 }
 
-void GETINPUTPWDR(const string& content) {
+void HNScriptASM::getinputpwdr(const string& content) {
     HidePwd("\r" + content);
 }
