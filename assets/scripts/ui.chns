@@ -1,60 +1,45 @@
 BEGIN_LOGO
 CLEAR
 PRINT
-PRINT
-PRINT
-PRINT
-PRINT                ██╗  ██╗  █████╗   █████╗  ██╗  ██╗ ███╗  ██╗ ███████╗ ████████╗
-PRINT                ██║  ██║ ██╔══██╗ ██╔══██╗ ██║ ██╔╝ ████╗ ██║ ██╔════╝ ╚══██╔══╝
-PRINT                ███████║ ███████║ ██║  ╚═╝ █████═╝  ██╔██╗██║ █████╗      ██║   
-PRINT                ██╔══██║ ██╔══██║ ██║  ██╗ ██╔═██╗  ██║╚████║ ██╔══╝      ██║   
-PRINT                ██║  ██║ ██║  ██║ ╚█████╔╝ ██║ ╚██╗ ██║ ╚███║ ███████╗    ██║   
-PRINT                ╚═╝  ╚═╝ ╚═╝  ╚═╝  ╚════╝  ╚═╝  ╚═╝ ╚═╝  ╚══╝ ╚══════╝    ╚═╝   
-PRINT                                     [For CMD, C++ Edition]                          
+PRINT  ██╗  ██╗  █████╗   █████╗  ██╗  ██╗ ███╗  ██╗ ███████╗ ████████╗
+PRINT  ██║  ██║ ██╔══██╗ ██╔══██╗ ██║ ██╔╝ ████╗ ██║ ██╔════╝ ╚══██╔══╝
+PRINT  ███████║ ███████║ ██║  ╚═╝ █████═╝  ██╔██╗██║ █████╗      ██║   
+PRINT  ██╔══██║ ██╔══██║ ██║  ██╗ ██╔═██╗  ██║╚████║ ██╔══╝      ██║   
+PRINT  ██║  ██║ ██║  ██║ ╚█████╔╝ ██║ ╚██╗ ██║ ╚███║ ███████╗    ██║   
+PRINT  ╚═╝  ╚═╝ ╚═╝  ╚═╝  ╚════╝  ╚═╝  ╚═╝ ╚═╝  ╚══╝ ╚══════╝    ╚═╝    For CMD | v0.2.0 [Beta 3]                      
 END_LOGO
 
 BEGIN_HOME
 PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT                              1) Play
-PRINT                              2) Mods
-PRINT                              3) Settings
-PRINT                              4) Quit
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT                                                                                                  Version: 0.2.0 [Beta 3]
-GETINPUT > 
+PRINT   ____________________
+PRINT   | Play             |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Mods             |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Settings         |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Quit             |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 END_HOME
 
 BEGIN_USER
 PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT                              1) Login
-PRINT                              2) Register
-PRINT
-PRINT                              3) Play with Guest
-PRINT                              4) Back
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-PRINT
-GETINPUT > 
+PRINT   ____________________
+PRINT   | Login            |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Register         |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Play with Guest  |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+PRINT   ____________________
+PRINT   | Back             |
+PRINT   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+GETINPUT
 END_USER
 
 BEGIN_NULL

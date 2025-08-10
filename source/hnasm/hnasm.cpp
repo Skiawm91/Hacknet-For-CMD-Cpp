@@ -3,7 +3,10 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <regex>
 using namespace std;
+
+extern string playerName;
 
 void HNASM(const string& fileName, const string& partName) {
     string scriptPath = "assets/scripts/" + fileName;
@@ -22,6 +25,7 @@ void HNASM(const string& fileName, const string& partName) {
             got >> command;
             getline(got, content);
             if (!content.empty() && content[0] == ' ') {content = content.substr(1);}
+            content = regex_replace(content, regex(R"(\$\{PLAYER\})"), playerName); // replace
             if (command=="WAIT") {hnasm.wait(content);}
             else if (command=="CLEAR") {hnasm.clear();}
             else if (command=="PRINT") {hnasm.print(content);}

@@ -8,9 +8,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <future>
 using namespace std;
 
 string input;
+ManageInput mi;
 
 #ifdef _WIN32
 void OTTF2K() {
@@ -28,26 +30,40 @@ void OTTF2K() {
 #endif
 
 void HNScriptASM::getinput(const string& content) {
-    extern string text;
-    Input(content);
-    input = text;
+    input.clear();
+    mi.kbInput(content, [](const string& text) {
+        input = text;
+    }, 27);
 }
 
 void HNScriptASM::getinputr(const string& content) {
-    extern string text;
+    input.clear();
     #ifdef _WIN32
     OTTF2K();
     #else
     cout << "\033[F\033[2K";
     #endif
-    Input(content);
-    input = text;
+    mi.kbInput(content, [](const string& text){
+        input = text;
+    }, 27);
 }
 
 void HNScriptASM::getinputpwd(const string& content) {
-    HidePwd(content);
+    input.clear();
+    mi.pwdInput(content, [](const string& pwdText) {
+        input = pwdText;
+    }, 27);
+    mi.stopPwdInput();
 }
 
 void HNScriptASM::getinputpwdr(const string& content) {
-    HidePwd("\r" + content);
+    input.clear();
+    #ifdef _WIN32
+    OTTF2K();
+    #else
+    cout << "\033[F\033[2K";
+    #endif
+    mi.pwdInput(("\r" + content), [](const string& pwdText) {
+        input = pwdText;
+    }, 27);
 }

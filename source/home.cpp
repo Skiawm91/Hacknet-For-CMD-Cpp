@@ -1,8 +1,8 @@
 ﻿#define _HAS_STD_BYTE 0
+#include "misc/manageInput.h"
 #include "audio.h"
 #include "logUI.h"
 #include "hnasm/hnasm.h"
-#include "boot/boot.h"
 #ifdef _WIN32
 #include <windows.h>
 #elif __APPLE__
@@ -13,6 +13,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <thread>
+#include <atomic>
 #include "porthack.h"
 using namespace std;
 
@@ -33,14 +35,29 @@ int main(){
     }
     cout << "\033]0;Hacknet For CMD\007";
     #endif
+    static ManageInput mi;
     int chse;
     extern string input;
     StopAudio();
     PlayAudio("AmbientDroneClipped.wav");
     while(true) {
+        chse = 0;
         HNASM("ui.chns", "LOGO");
         HNASM("ui.chns", "HOME");
-        try {chse = stoi(input);} catch (const invalid_argument) {chse = 0;}
+        mi.clearButtons();
+        mi.addButton("PLAY", 2, 9, 20, 3);
+        mi.addButton("QUIT", 2, 18, 20, 3);
+        mi.mInput([&](const string& buttonName) {
+            if (buttonName == "PLAY") {
+                chse = 1;
+            } else if (buttonName == "QUIT") {
+                chse = 4;
+            }
+        });
+        while (runningMouse) {
+            this_thread::sleep_for(chrono::milliseconds(10));
+        }
+        mi.stopAll();
         switch(chse) {
             case 1:
                 LogUI();
@@ -64,6 +81,7 @@ int main(){
                         }
                     }
                 }
+                break;
             default:
                 break;
         }

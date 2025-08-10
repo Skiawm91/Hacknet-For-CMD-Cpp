@@ -1,6 +1,8 @@
 # Hacknet4CMD: C++ Edition
 Hacknet4CMD is a legacy project, last updated about 1 year ago yet.
 <br/>
+This game likely Hacknet, from Steam (I guess you already know).
+<br/>
 <br/>
 Before make C++ ver, I just joined "Hacknet For CMD | Official Server" from Discord.
 <br/>

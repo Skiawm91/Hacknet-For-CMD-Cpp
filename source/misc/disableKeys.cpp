@@ -14,21 +14,21 @@
 #include <sys/select.h>
 #endif
 
-void KeyBlocker::disable(const std::vector<int>& keys) {
+void ManageInput::keyDisable(const std::vector<int>& keys) {
     blockedKeys = keys;
     blocking = true;
-    std::thread(&KeyBlocker::inputLoop, this).detach();
+    std::thread(&ManageInput::inputLoop, this).detach();
 }
 
-void KeyBlocker::disable(int key) {
-    disable(std::vector<int>{key});
+void ManageInput::keyDisable(int key) {
+    keyDisable(std::vector<int>{key});
 }
 
-void KeyBlocker::enable() {
+void ManageInput::keyEnable() {
     blocking = false;
 }
 
-bool KeyBlocker::isBlocking() const {
+bool ManageInput::isBlocking() const {
     return blocking;
 }
 
@@ -53,7 +53,7 @@ void setNonBlockingInput(bool enable) {
 }
 #endif
 
-void KeyBlocker::inputLoop() {
+void ManageInput::inputLoop() {
 #ifdef _WIN32
     while (blocking) {
         if (_kbhit()) {
