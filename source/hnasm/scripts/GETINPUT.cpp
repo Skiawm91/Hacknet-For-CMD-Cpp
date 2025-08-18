@@ -1,5 +1,5 @@
 #define _HAS_STD_BYTE 0
-#include "cmds.h"
+#include "ASMScript.h"
 #include "../../crypto/crypto.h"
 #include "../../misc/manageInput.h"
 #ifdef _WIN32
@@ -8,7 +8,6 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <future>
 using namespace std;
 
 string input;
@@ -29,14 +28,14 @@ void OTTF2K() {
 }
 #endif
 
-void HNScriptASM::getinput(const string& content) {
+void HNScript::GETINPUT(const string& content) {
     input.clear();
     mi.kbInput(content, [](const string& text) {
         input = text;
     }, 27);
 }
 
-void HNScriptASM::getinputr(const string& content) {
+void HNScript::GETINPUTR(const string& content) {
     input.clear();
     #ifdef _WIN32
     OTTF2K();
@@ -48,7 +47,7 @@ void HNScriptASM::getinputr(const string& content) {
     }, 27);
 }
 
-void HNScriptASM::getinputpwd(const string& content) {
+void HNScript::GETINPUTPWD(const string& content) {
     input.clear();
     mi.pwdInput(content, [](const string& pwdText) {
         input = pwdText;
@@ -56,7 +55,7 @@ void HNScriptASM::getinputpwd(const string& content) {
     mi.stopPwdInput();
 }
 
-void HNScriptASM::getinputpwdr(const string& content) {
+void HNScript::GETINPUTPWDR(const string& content) {
     input.clear();
     #ifdef _WIN32
     OTTF2K();

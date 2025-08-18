@@ -1,5 +1,5 @@
 ﻿#define _HAS_STD_BYTE 0
-#include "misc/manageInput.h"
+#include "input/input.h"
 #include "audio.h"
 #include "logUI.h"
 #include "hnasm/hnasm.h"

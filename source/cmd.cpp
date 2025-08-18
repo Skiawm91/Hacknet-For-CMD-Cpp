@@ -16,6 +16,6 @@ void Cmd() {
     system("read -p");
     #endif
     // string command;
-    // cout << "hoyiqiang@hacknet~$ ";
+    // cout << "@122.21.33.118> ";
     // getline(cin, command); 
 }

@@ -1,30 +1,31 @@
+// By new GPT-5
 #define _HAS_STD_BYTE 0
-#include "manageInput.h"
+#include "input.h"
+
 #ifdef _WIN32
 #include <windows.h>
 #else
 #include <termios.h>
 #include <unistd.h>
 #endif
-
 #include <iostream>
 #include <atomic>
 
-atomic<bool> runningKb;
-atomic<bool> escDetected(false);
+atomic<bool> runningPwd;
+// escDetected set in keyboardInput.cpp
 
-void ManageInput::kbInput(const string& prompt, Callback cb, int exitCode) {
-    ManageInput::stopKbInput();
-    runningKb = true;
+void ManageInput::pwdInput(const string& prompt, Callback cb, int exitCode) {
+    ManageInput::stopPwdInput();
+    runningPwd = true;
 #ifdef _WIN32
-    kbInputThread = thread(&ManageInput::kbWindowsInput, this, prompt, cb, exitCode);
+    pwdInputThread = thread(&ManageInput::kbWindowsInput, this, prompt, cb, exitCode);
 #else
-    kbInputThread = thread(&ManageInput::kbMacInput, this, prompt, cb, exitCode);
+    pwdInputThread = thread(&ManageInput::kbMacInput, this, prompt, cb, exitCode);
 #endif
 }
 
 #ifdef _WIN32
-void ManageInput::kbWindowsInput(const string& prompt, Callback cb, int exitCode) {
+void ManageInput::pwdWindowsInput(const string& prompt, Callback cb, int exitCode) {
     HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
     DWORD mode = 0;
     GetConsoleMode(hStdin, &mode);
@@ -33,7 +34,7 @@ void ManageInput::kbWindowsInput(const string& prompt, Callback cb, int exitCode
     cout << prompt << flush;
     string buffer;
 
-    while (runningKb) {
+    while (runningPwd) {
         escDetected = false;
         INPUT_RECORD record;
         DWORD eventsRead = 0;
@@ -41,13 +42,14 @@ void ManageInput::kbWindowsInput(const string& prompt, Callback cb, int exitCode
             if (record.EventType == KEY_EVENT && record.Event.KeyEvent.bKeyDown) {
                 char ch = record.Event.KeyEvent.uChar.AsciiChar;
                 if (ch == exitCode) {
-                    escDetected = true;
+                    escDetected = false;
                     break;
                 }
                 if (ch == '\r') {
                     cout << endl;
                     cb(buffer);
                     buffer.clear();
+                    runningPwd = false;
                     break;
                 } else if (ch == '\b') {
                     if (!buffer.empty()) {
@@ -56,17 +58,17 @@ void ManageInput::kbWindowsInput(const string& prompt, Callback cb, int exitCode
                     }
                 } else if (ch >= 32) {
                     buffer.push_back(ch);
-                    cout << ch << flush;
+                    cout << "*" << flush;  // 改這裡，輸出*
                 }
             }
         }
     }
 
     SetConsoleMode(hStdin, mode);
-    runningKb = false;
+    runningPwd = false;
 }
 #else
-void ManageInput::kbMacInput(const string& prompt, Callback cb, int exitCode) {
+void ManageInput::pwdMacInput(const string& prompt, Callback cb, int exitCode) {
     termios oldt, newt;
     tcgetattr(STDIN_FILENO, &oldt);
     newt = oldt;
@@ -75,7 +77,7 @@ void ManageInput::kbMacInput(const string& prompt, Callback cb, int exitCode) {
 
     cout << prompt << flush;
     string buffer;
-    while (runningKb) {
+    while (runningPwd) {
         escDetected = false;
         char ch = 0;
         ssize_t r = read(STDIN_FILENO, &ch, 1);
@@ -88,6 +90,7 @@ void ManageInput::kbMacInput(const string& prompt, Callback cb, int exitCode) {
             cout << endl;
             cb(buffer);
             buffer.clear();
+            runningPwd = false;
             break;
         } else if (ch == 127 || ch == '\b') {
             if (!buffer.empty()) {
@@ -96,17 +99,17 @@ void ManageInput::kbMacInput(const string& prompt, Callback cb, int exitCode) {
             }
         } else if (ch >= 32) {
             buffer.push_back(ch);
-            cout << ch << flush;
+            cout << "*" << flush;  // 改這裡，輸出*
         }
     }
 
     tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-    runningKb = false;
+    runningPwd = false;
 }
 #endif
 
-void ManageInput::stopKbInput() {
-    if (!runningKb) return;
-    runningKb = false;
-    if (kbInputThread.joinable()) kbInputThread.join();
+void ManageInput::stopPwdInput() {
+    if (!runningPwd) return;
+    runningPwd = false;
+    if (pwdInputThread.joinable()) pwdInputThread.join();
 }

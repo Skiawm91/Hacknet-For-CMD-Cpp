@@ -1,5 +1,5 @@
 ﻿#include "tutorial.h"
-#include "misc/manageInput.h"
+#include "input/input.h"
 #include "hnasm/hnasm.h"
 #include "audio.h"
 #include "cmd.h"

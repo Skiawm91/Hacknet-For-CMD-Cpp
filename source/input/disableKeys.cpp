@@ -1,6 +1,6 @@
 // Disable keys by GPT
 #define _HAS_STD_BYTE 0
-#include "manageInput.h"
+#include "input.h"
 #include <thread>
 #include <iostream>
 

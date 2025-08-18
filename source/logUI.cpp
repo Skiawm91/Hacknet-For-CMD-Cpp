@@ -1,6 +1,6 @@
 #define _HAS_STD_BYTE 0
 #include "logUI.h"
-#include "misc/manageInput.h"
+#include "input/input.h"
 #include "hnasm/hnasm.h"
 #include "crypto/crypto.h"
 #include "boot/boot.h"

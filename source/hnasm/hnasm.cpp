@@ -1,5 +1,5 @@
 #include "hnasm.h"
-#include "commands/cmds.h"
+#include "scripts/ASMScript.h"
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -20,23 +20,23 @@ void HNASM(const string& fileName, const string& partName) {
         if (readcmd) {
             command.clear();
             content.clear();
-            HNScriptASM hnasm;
+            HNScript s;
             istringstream got(line);
             got >> command;
             getline(got, content);
             if (!content.empty() && content[0] == ' ') {content = content.substr(1);}
             content = regex_replace(content, regex(R"(\$\{PLAYER\})"), playerName); // replace
-            if (command=="WAIT") {hnasm.wait(content);}
-            else if (command=="CLEAR") {hnasm.clear();}
-            else if (command=="PRINT") {hnasm.print(content);}
-            else if (command=="PRINTR") {hnasm.printr(content);}
-            else if (command=="PRINTWFW") {hnasm.printwfw(content);}
-            else if (command=="PLAYAUDIO") {hnasm.playaudio(content);}
-            else if (command=="GETINPUT") {hnasm.getinput(content);}
-            else if (command=="GETINPUTR") {hnasm.getinputr(content);}
-            else if (command=="GETINPUTPWD") {hnasm.getinputpwd(content);}
-            else if (command=="GETINPUTPWDR") {hnasm.getinputpwdr(content);}
-            else if (command=="GOTO") {hnasm.gotob(fileName, content);}
+            if (command=="WAIT") {s.WAIT(content);}
+            else if (command=="CLEAR") {s.CLEAR();}
+            else if (command=="PRINT") {s.PRINT(content);}
+            else if (command=="PRINTR") {s.PRINTR(content);}
+            else if (command=="PRINTWFW") {s.PRINTWFW(content);}
+            else if (command=="PLAYAUDIO") {s.PLAYAUDIO(content);}
+            else if (command=="GETINPUT") {s.GETINPUT(content);}
+            else if (command=="GETINPUTR") {s.GETINPUTR(content);}
+            else if (command=="GETINPUTPWD") {s.GETINPUTPWD(content);}
+            else if (command=="GETINPUTPWDR") {s.GETINPUTPWDR(content);}
+            else if (command=="GOTO") {s.GOTO(fileName, content);}
         }
     }
 }

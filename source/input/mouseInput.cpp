@@ -1,5 +1,5 @@
 #define _HAS_STD_BYTE 0
-#include "manageInput.h"
+#include "input.h"
 #ifdef _WIN32
 #include <windows.h>
 #elif __APPLE__
